@@ -22,3 +22,19 @@ Az ismertetők és élő bemutatókon túl – ahogy azt már az ITMP-kurzusokon
 | 9:15 - 11:00     | 1. Modul - React alapjai                  | **React és JSX**: Bevezetés a JSX szintaxisába, egyszerű komponens elkészítése.<br>**Hands-on gyakorlat**: Egy alapvető React komponens elkészítése, amely adatokat jelenít meg. |
 | 11:15 - 13:00    | 2. Modul - Komponensek, Props és Állapotkezelés | **Komponensek és Props**: Szülő-gyermek kapcsolatok, props-ok átadása.<br>**useState hook**: Alapvető állapotkezelés bevezetése.<br>**Hands-on gyakorlat**: Interaktív React alkalmazás építése useState és props-ok felhasználásával. |
 | 13:00 - 15:00    | 3. Modul - Egyszerű React App felépítése   | **Express és JSON adatforrások**: Egyszerű adatbetöltés.<br>**Workshop gyakorlat**: Egy egyszerű, React-tel és Express-szel működő alkalmazás felépítése. |
+
+| Időpont           | Téma                                                     |
+| ----------------- | -------------------------------------------------------- |
+| _09:00 - 09:15_   | _Köszöntő, technikai információk_                        |
+| **09:15 - 11:00** | **1. modul – React és JSX**                              |
+| 09:15 - 09:45     | 1. modul elméleti áttekintés - Sisák Zoltán és Mrakovics Olivér          |
+| 09:45 - 10:45     | 1. modul workshop - kiscsoportos, mentorált gyakorlat    |
+| _10:45 - 11:00_   | _Kávészünet_                                             |
+| **11:00 - 13:30** | **2. modul - Komponensek, props-ok és állapotkezelés**                   |
+| 11:00 - 11:30     | 2. modul elméleti áttekintés és demó - Sisák Zoltán és Mrakovics Olivér  |
+| 11:30 - 12:30     | 2. modul workshop - kiscsoportos, mentorált gyakorlat    |
+| _12:30 - 13:30_   | _Ebédszünet_                                             |
+| **13:30 - 14:45** | **3. modul - ...**            |
+| 13:30 - 14:00     | 3. modul elméleti áttekintés és demó - Sisák Zoltán és Mrakovics Olivér  |
+| 14:00 - 14:45     | 3. modul workshop - kiscsoportos, mentorált gyakorlat    |
+| _14:45 - 15:00_   | _Kérdések és válaszok, napzárás_                         |
