@@ -16,13 +16,6 @@ Az ismertetők és élő bemutatókon túl – ahogy azt már az ITMP-kurzusokon
 
 **A képzés tervezett tematikája és ütemezése:**
 
-| Időpont          | Modul                                      | Tartalom                                                                                      |
-|------------------|-------------------------------------------|----------------------------------------------------------------------------------------------|
-| 9:00 - 9:15      | Bevezetés, workshop menete                | **Bevezetés a React.js-be**: Áttekintés a React alapjairól, annak szerepéről a modern webfejlesztésben. |
-| 9:15 - 11:00     | 1. Modul - React alapjai                  | **React és JSX**: Bevezetés a JSX szintaxisába, egyszerű komponens elkészítése.<br>**Hands-on gyakorlat**: Egy alapvető React komponens elkészítése, amely adatokat jelenít meg. |
-| 11:15 - 13:00    | 2. Modul - Komponensek, Props és Állapotkezelés | **Komponensek és Props**: Szülő-gyermek kapcsolatok, props-ok átadása.<br>**useState hook**: Alapvető állapotkezelés bevezetése.<br>**Hands-on gyakorlat**: Interaktív React alkalmazás építése useState és props-ok felhasználásával. |
-| 13:00 - 15:00    | 3. Modul - Egyszerű React App felépítése   | **Express és JSON adatforrások**: Egyszerű adatbetöltés.<br>**Workshop gyakorlat**: Egy egyszerű, React-tel és Express-szel működő alkalmazás felépítése. |
-
 | Időpont           | Téma                                                     |
 | ----------------- | -------------------------------------------------------- |
 | _09:00 - 09:15_   | _Köszöntő, technikai információk_                        |
