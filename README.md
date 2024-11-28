@@ -4,7 +4,7 @@
 
 **2024. december 7., szombat**
 
-Az ősz beköszöntével egy újabb izgalmas képzéssel jelentkezünk. Június 8-án, szombaton, az ITMP Klub keretében egy egynapos, React alapozó képzést szervezünk, amelyen természetesen ingyenesen vehetnek részt klubtagjaink.
+Az ősz beköszöntével egy újabb izgalmas képzéssel jelentkezünk. Az ITMP Klub keretében egy egynapos, React alapozó képzést szervezünk, amelyen természetesen ingyenesen vehetnek részt klubtagjaink.
 
 Talán eddig azt gondoltad, hogy a React csak a haladó frontend fejlesztők eszköze, ezért soha nem is próbálkoztál vele. Itt az idő, hogy bebizonyítsuk, hogy a React segítségével könnyedén fejleszthetsz a interaktív webalkalmazásokat. Ebben vezető mentorként Sisák Zoltán és WorldSkills aranyérmes webfejlesztő versenyzője, Mrakovics Olivér lesz a segítségünkre.
 
