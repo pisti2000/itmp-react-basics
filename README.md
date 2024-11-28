@@ -4,9 +4,9 @@
 
 Az ősz beköszöntével egy újabb izgalmas képzéssel jelentkezünk. Június 8-án, szombaton, az ITMP Klub keretében egy egynapos, React alapozó képzést szervezünk, amelyen természetesen ingyenesen vehetnek részt klubtagjaink.
 
-Talán eddig azt gondoltad, hogy a React csak a haladó frontend fejlesztők eszköze, ezért soha nem is próbálkoztál vele. Itt az idő, hogy bebizonyítsuk, hogy a React segítségével könnyedén fejlesztheted a felhasználói felületeket, és hogy ez a technológia a Te mindennapjaidat is megkönnyítő eszközzé válhat. Ebben vezető mentorként Sisák Zoltán és WorldSkills aranyérmes webfejlesztő versenyzője, Mrakovics Olivér lesz a segítségünkre.
+Talán eddig azt gondoltad, hogy a React csak a haladó frontend fejlesztők eszköze, ezért soha nem is próbálkoztál vele. Itt az idő, hogy bebizonyítsuk, hogy a React segítségével könnyedén fejleszthetsz a interaktív webalkalmazásokat. Ebben vezető mentorként Sisák Zoltán és WorldSkills aranyérmes webfejlesztő versenyzője, Mrakovics Olivér lesz a segítségünkre.
 
-A React ma már elengedhetetlen eszköze a modern webfejlesztésnek, és a képzés során lehetőséged lesz megismerni a React alapjait, megtanulni, hogyan lehet komponenseket létrehozni, és megtapasztalni, milyen módon egyszerűsítheti a felhasználói felületek fejlesztését.
+A React ma már elengedhetetlen eszköze a modern webfejlesztésnek, és a képzés során lehetőséged lesz megismerni a React alapjait, megtanulni, hogyan lehet komponenseket létrehozni, és megtapasztalni, milyen módon egyszerűsítheti a felhasználói felületek fejlesztését.  A frontend fejlesztésre használható JS keretrendszerek valamelyikével a szoftverfejlesztlesztő- és tesztelő technikusoknak is meg kell ismerkednie, így a képzés különösen ajánlott azoknak, akik ezt a témakört oktatják valamelyik technikumban.
 
 Az ismertetők és élő bemutatókon túl – ahogy azt már az ITMP-kurzusokon megszokhattátok – a gyakorlatban is kipróbálhatjátok a frissen megszerzett tudást. Ebben felkészült és lelkes mentoraink lesznek a segítségetekre.
 
