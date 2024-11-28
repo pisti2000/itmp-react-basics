@@ -33,3 +33,5 @@ Az ismertetők és élő bemutatókon túl – ahogy azt már az ITMP-kurzusokon
 | 13:30 - 14:00     | 3. modul elméleti áttekintés és demó - Sisák Zoltán és Mrakovics Olivér |
 | 14:00 - 14:45     | 3. modul workshop - kiscsoportos, mentorált gyakorlat                   |
 | _14:45 - 15:00_   | _Kérdések és válaszok, napzárás_                                        |
+
+<button>Hahó</button>
