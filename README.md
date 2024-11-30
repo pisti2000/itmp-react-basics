@@ -1,4 +1,4 @@
-<img src="assets/itmp-klub-bevezetes-a-reactjs-be.webp">
+<img src="assets/images/itmp-klub-bevezetes-a-reactjs-be.webp">
 
 # ITMP Klub képzés infotanároknak - Bevezetés a React.js-be
 
