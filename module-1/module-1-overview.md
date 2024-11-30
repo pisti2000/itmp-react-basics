@@ -1,198 +1,82 @@
-# 1. modul elméleti áttekintés - Bevezetés a Node.js-be
+# 1. modul elméleti áttekintés - React és JSX
 
-- Node.js és NPM alapok
-- NPM
-- Bevezetés a backendbe, REST
-- CORS
-- ExpressJS bevezetés
-- Alkalmazás futtatása Node.js-sel
+- Mi az a React?
+- Demo: HTML/CSS kártyák létrehozása – Probléma bemutatása
+- Demo: React projekt inicializálása
+- Mi az a JSX?
+- Styling alkalmazása
+- Demo: Kártya elkészítése JSX-ben
+- Demo: Project buildelése
 
-## Node.js alapok
+## Mi az a React?
 
-- **Mi az a Node.js?**: Node.js egy szerveroldali JavaScript runtime környezet. Lehetővé teszi, hogy JavaScript-ben szerveroldali kódot írjunk és futtassunk, melynek köszönhetően ugyanazt a nyelvet használhatjuk frontend és backend oldalon.
+- A React egy JavaScript könyvtár, amelyet a Facebook fejlesztett ki 2013-ban. Célja, hogy segítse a fejlesztőket dinamikus, gyors és jól karbantartható felhasználói felületek létrehozásában.
 
-- **Node.js telepítése**:
+- **Miért előnyös a használata?**
 
-  - Telepítsük a Node.js LTS verzióját a [https://nodejs.org/en](https://nodejs.org/en) oldalról
-  - Ellenőrizhetjük a `node -v` paranccsal
+  - Újrafelhasználhatóság: A kód részeit (komponenseket) egyszer kell megírni, és több helyen felhasználhatók.
+  - Virtual DOM: A React nem manipulálja közvetlenül a böngésző DOM-ját, hanem előbb egy virtuális másolatban dolgozik, így gyorsabban reagál az adatváltozásokra.
+  - Állapotkezelés: Könnyű kezelni az alkalmazás változó állapotát (például egy tanmenet elemeinek listázása vagy frissítése).
 
-- **Node.js felhasználási területei**: Kiemelném, hogy a Node.js nemcsak backend REST API-k készítésére használható, hanem:
+- További érdekesség: A React ma már számos területen elterjedt, például mobilapp-fejlesztésben is (React Native).
 
-  - Parancssori eszközök létrehozására (CLI),
-  - Valós idejű alkalmazások (chat applikációk),
-  - Különböző scriptek
-  - Web Appok
+## Demo: HTML/CSS kártyák létrehozása
 
-- **A kurzus fókusza: REST API backend készítés Express használatával**: Bár a Node.js széles körben használható, ezen a kurzuson a REST API fejlesztésére koncentrálunk az Express keretrendszer segítségével. (Hogy mi az Express és a REST API, arról később)
+- **Probléma megfogalmazása:**
+  - Ha a kártyák stílusán változtatni kell, minden egyes másolatot külön módosítani kell.
+  - A statikus kód duplikáció nehezen karbantartható, és növeli a hibalehetőségeket.
 
-## NPM
+## Demo: React project inicializálása
 
-- **Mi az NPM?**:
+1. Nyiss meg egy terminált, és futtasd a következő parancsot: `npm create vite@latest`
+2. Adj nevet a projektnek (például: `tanmenet-app`), majd válaszd ki a `React + JavaScript` opciót.
+3. Lépj be a mappába, és telepítsd a függőségeket: `npm install`
+4. Indítsd el a fejlesztői szervert: `npm run dev`
 
-  - Node Package Manager
-  - Az NPM a Node.js csomagkezelője, amely segítségével más fejlesztők által írt csomagokat használhatunk újra. Ezáltal nem szükséges mindent nulláról írni.
-  - A Node.js telepítésekor az NPM automatikusan települ
+A **Vite** egy modern eszköz, amely gyorsabb fejlesztői környezetet biztosít, mint a régebbi build-eszközök (például Webpack). Az inicializált projekt egy alap React környezetet tartalmaz, amely azonnal futtatható.
 
-- **Csomagok kezelése és telepítése**:
+## Mi az a JSX?
 
-  - `npm init` – egy új projekt inicializálása, ami létrehozza a projekt csomagkezelő fájlját, a `package.json`-t. Fel fog tenni kérdéseket (projekt név, leírás, stb.), de az `npm init -y` flaggel ez átugorható, és alapértelmezett értékeket fog használni. Ezek aztán belekerülnek a `package.json`-ba.
-  - A `package.json`-t manifesztként használjuk, amely információkat tárol az alkalmazásról, modulokról és csomagokról.
-  - `npm install <name>` - csomagok telepítése, később látunk rá példát. Rövidítése `npm i`.
-  - `package-lock.json`: A package-lock.json biztosítja, hogy a projekt minden függősége ugyanazon a verzión maradjon, ahogy azt eredetileg telepítették, így garantálva a stabil működést és elkerülve a verzióváltozásból adódó hibákat.
-  - `node_modules`: A node_modules mappa tárolja a projekt minden szükséges külső csomagját és azok függőségeit, így az alkalmazás ezekre támaszkodhat a futás során.
+- A JSX (JavaScript XML) a React saját szintaxisa, amely lehetővé teszi HTML-szerű kód írását JavaScript-ben. Ezáltal a komponensek olvashatóbbak és karbantarthatóbbak lesznek.
 
-- **Globális csomagok (-g)**: A -g flag használatával globálisan telepíthetünk csomagokat
+- **Miért hasznos?**:
+  - Könnyebb vizualizálni a komponensek struktúráját.
+  - Közvetlenül összekapcsolja az adatokat és az UI-t (például változókat ágyazhatunk be HTML-be).
 
-## Példa az `npm init` parancsra és a `package.json` fájlra
+## Styling alkalmazása
 
-<details>
-<summary>Nyiss le a példáért!</summary>
+- A styling alkalmazásához két fő megközelítést fogunk használni a projekt során:
 
-### `npm init` példa:
+  - **Külső CSS fájlok:** Ez a klasszikus megközelítés, amelynél a stílusokat külön .css fájlokban definiáljuk, majd ezeket importáljuk a megfelelő komponensekbe. Ez egyértelmű szervezést biztosít, különösen, ha nagyobb projekten dolgozunk. Így könnyen karbantartható a kód, és a stílusokat újra felhasználhatjuk más komponensekben.
+  - **Inline styling:** Ezt a módszert kisebb, dinamikus stílusmódosítások esetén használjuk. Az inline style-ok React-ben egy JavaScript objektum formájában vannak megadva, amely lehetőséget ad arra, hogy a stílusokat dinamikusan változtassuk, például a komponens állapota alapján.
 
-```
-$ npm init
-This utility will walk you through creating a package.json file.
-It only covers the most common items, and tries to guess sensible defaults.
+- További styling lehetőségek React-ben
+  - **CSS Modules:** Lehetőséget biztosít a stílusok lokális használatára, így a komponensek saját stílusai nem fognak ütközni más komponensekkel. A .module.css fájlok különösen akkor hasznosak, ha nagyobb projektekben szeretnénk elkerülni a globális stílusok ütközését.
+  - **Styled Components (vagy más CSS-in-JS megoldások):** Ez a megközelítés a komponensek szorosabb összekapcsolását teszi lehetővé a stílusokkal. Például a styled-components könyvtár használatával közvetlenül a JavaScript kódban definiálhatjuk a stílusokat, ami tiszta és moduláris kódot eredményez.
+  - **Preprocesszorok (pl. SCSS, LESS):** Ha előfeldolgozókat használunk, a CSS kódunk lehet strukturáltabb, támogathat változókat, mixineket és egyéb haladó funkciókat. Ez hasznos lehet komplex projektek esetén.
+  - **Tailwind CSS:** Ez egy utility-first megközelítés, amely előre definiált osztályokat biztosít. Segítségével gyorsan építhetünk fel designokat, anélkül hogy manuálisan kellene CSS-t írni.
 
-See `npm help init` for definitive documentation on these fields
-and exactly what they do.
+## Demo: Kártya elkészítése JSX-ben
 
-Use `npm install <pkg>` afterwards to install a package and
-save it as a dependency in the package.json file.
+## Demo: Project buildelése
 
-Press ^C at any time to quit.
-package name: (test) test
-version: (1.0.0)
-description: Leiras
-entry point: (index.js) main.js
-test command:
-git repository:
-keywords: ITMP, almafa, kiscica
-author: Oliver
-license: (ISC) MIT
-About to write to D:\path\to\itmp-nodejs-basics\test\package.json:
+Amikor egy React alkalmazást elkészítünk, az általában fejlesztői módban fut, ahol a kódot élőben szerkeszthetjük, és azonnal láthatjuk a változtatásokat. Azonban amikor az alkalmazást éles környezetbe szeretnénk telepíteni – például egy szerverre vagy tárhelyre –, akkor azt "buildelni" kell. Ez a folyamat optimalizálja az alkalmazást, hogy gyorsan és hatékonyan működjön a felhasználóknál.
 
-{
-  "name": "test",
-  "version": "1.0.0",
-  "description": "Leiras",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "ITMP",
-    "almafa",
-    "kiscica"
-  ],
-  "author": "Oliver",
-  "license": "MIT"
-}
+- **Mit jelent a buildelés?**:
 
+  - Kód optimalizálása: A build folyamat összecsomagolja, minimalizálja (csökkenti a méretét), és hatékonyabbá teszi az alkalmazás kódját.
+  - Fejlesztői kód eltávolítása: A fejlesztés közben használt extra eszközöket (pl. hibakereső üzeneteket) eltávolítja, hogy az alkalmazás csak azt tartalmazza, ami a működéséhez szükséges.
+  - Futtatható formátum készítése: Az eredmény egy olyan statikus fájlkészlet (HTML, CSS, JavaScript), amely közvetlenül hosztolható egy webszerveren.
 
-Is this OK? (yes) yes
-```
+- **Hogyan végezzük el a buildelést?**
 
-### `package.json` példa:
+  - `npm run build` - Ez létrehoz egy `dist` (distribution) nevű mappát a projekt gyökérkönyvtárában. Ebben találhatók azok a fájlok, amelyeket éles környezetbe tölthetünk fel.
 
-```json
-{
-  "name": "test",
-  "version": "1.0.0",
-  "description": "Leiras",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": ["ITMP", "almafa", "kiscica"],
-  "author": "Oliver",
-  "license": "MIT"
-}
-```
+- **Helyi tesztelés (opcionális):**
 
-</details>
+  - A buildelt verziót tesztelhetjük egy helyi szerveren, például a Vite beépített szolgáltatásával: `npm run preview`
 
-Mint fentebb említettem, nem kell válaszolnunk a kérdésekre, ha kiadjuk a `-y` flaget.  
-Ezek igazábol csak **metaadatok**. Nekünk ezek nem olyan fontosak. Ezek leginkább akkor kellenek, ha npm csomagot publikálunk. A leginkább fontos dolog itt a `"scripts"` tömb. Később látunk példát.  
-A package-lock.json-nal és a node_modules-szal pedig szinte soha nem kell foglalkoznunk.
-
-## Backend, REST
-
-- **Mi az a backend?**: A backend tulajdonképpen a szerveroldal, amely feldolgozza a kéréseket, adatokat kezel, és választ ad a frontendnek. A felhasználó számára ez nem látható.
-
-- **Hogyan kommunikál a frontend és a backend?**: A mi esetünkben a frontend HTTP kéréseket küld a backendhez, amely ezekre válaszol (pl. adatokat ad vissza vagy feldolgozza a felhasználói bemenetet).
-
-- **REST API**:
-
-  - A REST (Representational State Transfer) egy architektúra, amelyet webszolgáltatások létrehozására használunk. Egyszerűen HTTP kérésekkel dolgozik (GET, POST, PUT, DELETE).
-  - API: Application Programming Interface – egy interfész, amellyel a kliensek kommunikálnak a szerverrel.
-  - Most tulajdonképpen egy ilyen REST API-t fogunk készíteni.
-
-- **JSON**: Egy egyszerű, szöveges adatformátum, amelyet adatok strukturált tárolására és átvitelére használnak, kulcs-érték párok formájában. A REST API-k JSON formátumot használnak az adatok küldésére és fogadására, mivel könnyen olvasható, és jól támogatott a legtöbb programozási nyelvben.
-
-- **HTTP metódusok: GET, POST, PUT, DELETE**:
-  - Ezekkel mondjuk el, hogy milyen típusú műveletet fogunk végrehajtani. Ezek határozzák meg, hogy a szerver hogyan kezelje a kéréseket az adott erőforrásokkal:
-  - GET: Adatok lekérése (pl. egy felhasználó adatainak megjelenítése)
-  - POST: Új adat létrehozása (pl. új felhasználó létrehozása)
-  - PUT: Létező adat módosítása (pl. felhasználó adatainak szerkesztése)
-  - DELETE: Adat törlése (pl. felhasználó törlése)
-  - A REST-ben kulcsszerepet játszanak, hiszen a REST API-kat úgy tervezik, hogy ezekkel a szabványos HTTP metódusokkal vezéreljék az adatkezelést, így egyszerű, érthető és szabványosított felületeket kínálnak a kliens-szerver kommunikációhoz.
-
-## ExpressJS bevezetés
-
-- **Mi az Express?**: Az Express egy minimalista és flexibilis library, amely megkönnyíti az API-k fejlesztését Node.js-ben. Segít a route-ok, middleware-ek, és HTTP metódusok kezelésében. A 2. modulban fogunk látni nagyobb példát.
-
-- **Node.js project inicializálása**: Hozzunk létre egy mappát a számítógépünkön, majd nyissuk meg VS Code-ban, vagy valamilyen más editorban. A mappában adjuk ki az `npm init -y` parancsot.
-
-- **Express telepítése NPM-mel**: A firssen inicializált projektünkben futtassuk az `npm install express` parancsot
-
-- **Express szerver létrehozása**: Hozzunk létre egy index.js fájlt, aminek a tartalma legyen a következő:
-
-  ```js
-  const express = require("express");
-  const app = express();
-
-  app.get("/", (req, res) => {
-    res.send("Hello ITMP!");
-  });
-
-  app.listen(3000, () => {
-    console.log("Server is running on port 3000");
-  });
-  ```
-
-## CORS
-
-- **Mi az a CORS (Cross-Origin Resource Sharing)?**: A CORS egy mechanizmus, amely lehetővé teszi, hogy az egyik domainről érkező JavaScript kód másik domainen lévő erőforrásokhoz férjen hozzá. Például, ha egy frontend alkalmazás (pl. http://localhost:3000) adatokat kér egy backend API-ból (http://localhost:5000), akkor a CORS-nak megfelelően kell konfigurálni a backend-et.
-
-- **Miért van korlátozva a cross-origin hozzáférés?**: A böngészők alapértelmezésben blokkolják a cross-origin kéréseket, hogy megvédjék a felhasználókat az esetleges biztonsági problémáktól, például a CSRF támadásoktól. Ezek a támadások kihasználhatják, hogy a webalkalmazások különböző forrásokból kérnek erőforrásokat.
-
-- **CORS beállítása Express-ben**:
-
-  - Az Express-ben egy egyszerű mód a CORS engedélyezésére a cors csomag használata. A csomag telepítése: `npm i cors`
-  - Miután telepítettük, hozzá kell adnunk middleware-ként:
-  - ```js
-    const express = require("express");
-    const cors = require("cors");
-    const app = express();
-
-    app.use(cors());
-    ```
-
-  - Finomhangolás: A `cors()` middleware paraméterekkel beállítható, hogy mely domainek férhetnek hozzá az API-hoz. Példa:
-  - ```js
-    app.use(
-      cors({
-        origin: "http://localhost:3000",
-      })
-    );
-    ```
-
-## Alkalmazás futtatása Node.js-sel
-
-- `node <filename>`
-- Kiterjesztés `(.js)` elhagyható
-- Ha módosítunk a kódon, akkor újra kell indítani (megoldás később)
-- Kilépni a `Ctrl+C` billentyűkombóval lehet
-- Ha nem egy Expresses alkalmazásról van szó, tehát az alkalmazás nem fut "örökre", akkor csak szimplán végrehajtja az utasításokat. Például egy egyszerű egy soros `console.log`.
+- **Miért fontos ez?**
+  - Gyors betöltés: A buildelt alkalmazás gyorsan betöltődik a böngészőben, mert a fájlok mérete minimalizált.
+  - Biztonságosabb alkalmazás: A fejlesztői kód és a hibakeresési funkciók nincsenek jelen az éles változatban.
+  - Felhasználásra kész: A buildelt fájlok már közvetlenül hosztolhatók, például egy statikus tárhelyen vagy CDN-en (pl. Netlify, Vercel).
