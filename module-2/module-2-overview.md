@@ -1,54 +1,57 @@
 # 2. modul elméleti áttekintés és demo - Express CRUD
 
-- Mi az a CRUD?
-- Start NPM script
-- REST API Tesztelése
-- Express CRUD
+- Mik a komponensek?
+- Demo: Statikus komponens létrehozása a kártyának
+- Mi az a prop?
+- Demo: Kártya komponens update: prop-ból jön az adat (már 3 kártya)
+- Demo: Adatforrás használata és map-elés
+- Mi az a state? (hookokról általában)
+- Demo: Teljes óraszám számláló
 
-## CRUD
+## Mik a komponensek?
 
-- **Mi az a CRUD?**: Create, Read, Update, Delete, a leggyakoribb adatkezelési műveletek. Egy CRUD appot fogunk most létrehozni.
+- A komponens a React alkalmazások építőköve. Olyan újrafelhasználható egységek, amelyek önállóan kezelik a megjelenítést és az adatokat.
 
-## Start NPM script
+- **Miért hasznosak?**
+  - Újrafelhasználhatók: Egyetlen komponenst többször is felhasználhatsz.
+  - Jobb karbantarthatóság: Ha változik egy komponens logikája, csak egy helyen kell módosítanod.
+  - Olvashatóbb kódot eredményez: Az alkalmazás logikája kisebb, könnyen érthető részekre bontható.
 
-- Jelenleg az alkalmazást mindig újra kell indítani, ha módosítunk valamelyik fájlon. Ez nagyon időigényes és unalmas.
+## Demo: Statikus komponens létrehozása a kártyának
 
-- Van egy npm csomag: `nodemon`, ami erre van kitalálva. Ennek köszönhetően nem kell mindig újraindítani az appunkat, hanem figyel, és automatikusan újraindul, ha módosítottunk valamelyik fájlon. A nodemon-t globálisan telepítsük NPM segítségével: `npm install -g nodemon`. Ha ez megvan, el tudjuk indítani az appunkat a `nodemon index.js` paranccsal.
+## Mi az a prop?
 
-- **NPM scrtipt**: hozzunk létre egy NPM scriptet a package.json fájlba:
-  ```json
-  {
-    "name": "workshop-solution",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "start": "nodemon index.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-      "express": "^4.21.1"
-    }
-  }
-  ```
-  - Ha ez megvan, az `npm run start` parancs segítségével lehet futtatni a szervert.
+- A React egyik alapvető mechanizmusa a prop-ok használata. Ezek teszik lehetővé az adatok átvitelét egy szülőkomponensből egy gyermekkomponensbe. A prop-ok statikusak, tehát a szülő által meghatározott értéket kapják, és azt nem lehet módosítani a gyermekkomponensben. Ez az adatáramlás segít abban, hogy a komponensek egymástól függetlenül működhessenek.
 
-## REST API Tesztelése
+- **Mi az a prop?**
 
-- Egy GET endpointot tudunk tesztelni a bőngészőnkben, ugyanis a böngésző GET HTTP metódussal küld kérést
+  - Egy rövidítés: property (tulajdonság).
+  - Objektumként kerül átadásra a komponens hívásakor.
+  - Statikus adatok: Nem lehet módosítani, csak olvasni.
+  - Egyirányú adatáramlás: Az adat mindig a szülőtől a gyermek irányába áramlik.
 
-- A REST API tesztelésére, illetve HTTP kérések küldésére vannak eszközök:
+- **Miért fontos?**
+  - Újrafelhasználhatóság: Ugyanaz a komponens különböző adatokat kezelhet attól függően, hogy milyen prop-okat kap.
+  - Átláthatóság: Könnyen nyomon követhető az adatáramlás a komponensek között.
 
-  - [Postman](https://www.postman.com/)
-  - [Insomnia](https://insomnia.rest/)
-  - [Thunder Client](https://www.thunderclient.com/)
+## Demo: Kártya komponens update – prop-ból jön az adat
 
-- Mi most a Thunder Client-et fogjuk használni, ami egy VS Code bővítmény: [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+## Mi az a state? (hookokról általában)
 
-## Express CRUD
+- A hook-ok a React 16.8 verziójától érhetők el, és lehetővé teszik a funkcionális komponensek számára, hogy olyan funkciókat használjanak, amelyeket korábban csak osztályalapú komponensekben lehetett elérni. A leggyakrabban használt hook-ok a useState és a useEffect.
 
-- Az első modulban elkészített Express szerver lesz továbbfejlesztve, "élő" demo keretein belül
+- **Mi az a hook?**
 
-- Egy CRUD alkalmazást fogunk elkészíteni, egyelőre memóriában tárolt adatokkal
+  - Egy speciális függvény, amit csak React komponensekben hívhatunk meg.
+  - Két fő szabály:
+    - Csak a legfelső szinten használható (nem lehet például ciklusokban hívni).
+    - Csak React komponensekben vagy saját hook-okban használható.
+
+- **Mi az a state?**
+  - A state a React egyik alapfogalma, amely lehetővé teszi, hogy a komponensek „emlékezzenek” az aktuális állapotukra. Ez dinamikus felhasználói interakciókat tesz lehetővé, például űrlapok kitöltését vagy gombok kattintását.
+
+## Demo: Adatforrás használata és map-elés
+
+- **Cél:** Használjunk egy tömböt az adatok forrásaként, és a map függvénnyel dinamikusan hozzunk létre kártyákat.
+
+## Demo: Teljes óraszám számláló
