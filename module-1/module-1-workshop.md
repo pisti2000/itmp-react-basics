@@ -1,13 +1,12 @@
-# 1. modul workshop - Node.js telepítése, egyszerű express project létrehozása
+# 1. modul workshop - React és JSX
 
 - Node.js telepítése
-- Projekt inicializálása
-- Express telepítése
-- Express szerver és egy GET endpoint létrehozása
+- React projekt inicializálása
+- Template elkészítése JSX-ben
 
 > [!NOTE]  
 > **Cél:**  
-> Minden szükséges eszköz telepítve legyen a számítógépen: Node.js, NPM, Visual Studio Code. Legyen létrehozva egy Node.js projekt, az express telepítve legyen. Értenünk kell egy Node.js projekt felépítését, valamint azt, hogy milyen fájlokat tartalmaz. Ismerkedjünk az express-szel, egy egyszerű GET endpointot és hozzunk létre.
+> Minden szükséges eszköz telepítve legyen a számítógépen: Node.js, NPM, Visual Studio Code. Legyen létrehozva egy React projekt. A kapott HTML template-et alapul véve készítsük el ennek a JSX változatát.
 
 <hr />
 
@@ -23,62 +22,80 @@
 
 - Ha nincs feltelepítve [Visual Studio Code](https://code.visualstudio.com/), akkor azt is telepítsd!
 
-## Projekt inicializálása
+## React projekt inicializálása
 
-- Készíts egy mappát a számítógépeden, ahova majd a projektfájlok fognak kerülni. Ezt a mappát nyisd meg VS Code-ban.
-- Nyiss egy terminált, ami ebbe a mappába mutat. A legegyszerűbb VS Code-ban: **View > Terminal**
-- Add ki az `npm init -y` parancsot. Ha elahogyod a `-y` flaget, akkor fel fog tenni pár kérdést a projekttel kapcsolatban, ezt is kipróbálhatod. (`npm init`) Ha egyszer már inicializálva lett a projekt ezzel a paranccsal, akkor többször már nem kell kiadni.
+1. Nyiss egy terminált, és futtasd a következő parancsot: `npm create vite@latest`. Ha kérdez valamit, nyomd meg az `y`-t!
+2. Adj nevet a projektnek (például: `tanmenet-app`), majd válaszd ki a `React + JavaScript` opciót. (nyilakkal lehet lépni, majd enter)
+3. Nyissuk meg a legenerált `tanmenet-app` projektet Visual Studio Code-ban.
+4. Nyiss egy terminált a VS Code-ban, és telepítsd a függőségeket: `npm install`
+5. Indítsd el a fejlesztői szervert: `npm run dev`
+6. Töröld a felesleges file-okat: `src/assets/`, `App.css`
+7. Az `src/index.css` fájlban törölj mindent
+8. Az `src/App.tsx` tartalma legyen csak ennyi:
 
-## Express telepítése
+   ```jsx
+   const App = () => {
+     return <div>Hello, ITMP!</div>;
+   };
 
-Telepítsd az express NPM package-t az `npm install express` paranccsal
+   export default App;
+   ```
 
-## Express szerver és egy GET endpoint létrehozása
+Akkor jó, ha az oldalon csak a "Hello, ITMP!" szöveget látjuk. Nem kell újraindítani a szervert, automatikusan frissül.
 
-Készíts egy index.js fájlt a következő tartalommal:
+## Template elkészítése JSX-ben
 
-```js
-const express = require("express");
-const app = express();
+A template-et az [/assets/template](../assets/template/) mappában találod.
 
-app.get("/itmp", (req, res) => {
-  res.send("Hello ITMP!");
-});
+1. Másold át a template `style.css` fájljának tartalmát a React project `index.css` fájljába.
+2. A React projectedben keresd meg az `index.html` fájlt. és a `<title>`-t írd át erre: **Bevezetés a programozásba | Tanmenet**. Mást itt nem kell módosítanod!
+3. Másold át a template `index.html` `body`-jában található HTML-t (tehát a `main`-t és ami alatta van) az `App.tsx` `return` részéhez.
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
+   ```jsx
+   const App = () => {
+     return (
+       <main>
+         <h1>Ide jön minden!</h1>
+       </main>
+     );
+   };
+
+   export default App;
+   ```
+
+4. Ez így még nem fog működni, ezt át kell írni JSX-re. Ehhez csak apró módosítások fognak kelleni. Próbáld meg magadtól, ha nem megy, nézd meg a segítségeket:
+
+<details>
+<summary>1. segítség: class</summary>
+
+Ahhoz szoktunk, hogy HTML-ben a tagekhez a `class` kulcsszóval rendelünk osztályokat. A JSX-ben ez nem így van, mivel a `class` JavaScript-ben egy "foglalt" kulcsszó, ezért a `className` attribútubot használjuk helyette. Tehát mindenhol, ahol most `class` van, át kell írni `className`-re.
+
+</details>
+
+<details>
+<summary>2. segítség: inline style</summary>
+
+A jelenlegi projektünkben 2 helyen használunk inline style-ingot. Ha HTML-ben tesszük ezt meg, akkor csak simán egy string-et kell használnunk. Ezzel szemben JSX-ben egy JavaScript objectet kell átadnunk a style attribútumnak. Például:
+
+**HTML példa:**
+
+```html
+<div style="font-size: 12px; display: inline-block">Szia, inline style!</div>
 ```
 
-Hozz még létre további **2** endpointot az alábbiak szerint:
+**JSX példa:**
 
-- `/nodejs`
-  - Visszaad egy stringet: `"A Node.js egy olyan szerveroldali JavaScript futtatókörnyezet, amely a V8 JavaScript motorra épül."`
-- `/express`
-  - Visszaad egy stringet: `"Az Express egy minimalista webes keretrendszer, amely a Node.js-hez készült."`
-
-<br/>
-
-A kész fájlt futtasd a `node index.js` parancs segítségével. Ha mindent jól csináltál, akkor a konzolon ki lesz írva a `console.log`-ban látott üzenet.  
-Az app ezután elérhető lesz a `http://localhost:3000` címen.
-
-Próbáld értelmezni, hogy melyik sor mit csinál. Ha elakadsz, fordulj a mentorodhoz!
-
-## Legenerált projektfájlok tanulmányozása
-
-Az `npm init` valamint az `npm install` parancsok legeneráltak nekünk mindenféle fájlokat és mappákat (`package.json`, `pacakge-lock.json`, `node_modules`). Nézd meg és tanulmányozd ezeket az állományokat. Gondold végig, hogy az egyes állományoknak mi a szerepe. Ha valamiben nem vagy biztos, akkor kérd a mentorod segítségét!
-
-## BÓNUSZ
-
-A [`/module-1/assets/index.html`](./assets/index.html) elérési úton találsz egy `index.html` fájlt. Ezt a fájlt szolgáld ki express segítségével!  
-A projektedben készíts egy `public` mappát, amibe másold bele ezt az `index.html`-t. A fájl tartalmán ne módosíts!
-
-Ha ez megvan, a legelső endpoint elé másold be az alábbi sort:
-
-```js
-app.use("/", express.static("public"));
+```jsx
+<div style={{ fontSize: "12px", display: "inline-block" }}>
+  Szia, inline style!
+</div>
 ```
 
-Indítsd újra az Express szervert, majd teszteld úgy, hogy a [http://localhost:3000/](http://localhost:3000/) URL-re navigálsz.
+</details>
 
-Tanulmányozd ezt az `index.html` fájlt, hogy hogyan fetch-eli le a szerverről az endpointokat!
+<br />
+
+5. Ha mindez megvan, akkor látnunk kell az appunkat az oldalon (a konzolon hiba nélkül), viszont itt még nem működik semmi.
+
+Ha nem sikerült, a megoldást a [module-1/workshop-solution](./workshop-solution/) mappában találod.  
+Elakadás esetén fordulj a mentorodhoz!
