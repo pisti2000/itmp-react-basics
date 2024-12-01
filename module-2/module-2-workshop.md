@@ -1,152 +1,115 @@
 # 2. modul workshop - Node.js és Express CRUD alkalmazás elkészítése
 
-- A bemutatott CRUD alkalmazás elkészítése
-- Az elkészített API tesztelése a Thunder Client bővítménnyel
+- Komponens létrehozása az óra kártyának
+- Órák tárolása tömbben
+- Kártyák kimapelése a tömb alapján
+- Teljes óraszám számláló
 
 > [!NOTE]  
 > **Cél:**  
-> Az 1. modulból kiindulva hozzuk létre a lent definiált CRUD endpointokat, amik felhasználókat kezelnek. Az adatokat tároljuk memóriában egy tömbben, és JavaScript függvényekkel manipuláljuk őket. A Thunder Client VS Code bővítménnyel teszteljük a végpontokat.
+> Az 1. modulból kiindulva hozzuk létre egy komponenst az óra kártyának. A kártyák adatait tároljuk state-ként egy tömbben, majd ezt a tömböt mapeljük ki, és jelenítsük meg ez alapján a kártyákat. A teljes óraszám számlálót is készítsük el.
 
 <hr />
 
-## CRUD alkalmazás elkészítése
+## Komponens létrehozása az óra kártyának
 
-Készítsd el a 2. modulban elkészített CRUD alkalmazást!
+1. Hozz létre egy fájlt az `src/components` mappába `OraCard.jsx` néven, majd definiálj egy üres React komponenst!
 
-- Ezek az endpointok kellenek:
+   ```jsx
+   const OraCard = () => {
+     return <div>OraCard</div>;
+   };
 
-  - **GET** `/api/users`
-    - Az összes felhasználó kilistázása
-    - Sikeres kérés esetén 200-as státuszkód
-  - **GET** `/api/users/:id`
-    - 1 felhasználó visszaadása
-    - Sikeres kérés esetén 200-as státuszkód
-  - **POST** `/api/users`
-    - Felhasználó létrehozása
-    - Sikeres kérés esetén 201-es státuszkód
-  - **PUT** `/api/users/:id`
-    - Felhasználó szerkesztése
-    - Sikeres kérés esetén 200-as státuszkód
-  - **DELETE** `/api/users/:id`
-    - Felhasználó törlése
-    - Sikeres kérés esetén 204-es státuszkód
+   export default OraCard;
+   ```
 
-- Nyisd meg az 1. modul megoldását. Ha gondolod, előbb készíts róla másolatot, hogy később is meglegyen.
-- Készítsd el ezt az 5 endpointot. Már van egy endpoint példa az 1. modul megoldásában, amit nyugodtan kitörölhetsz:
+2. Az `App.tsx`-ből másolj ki egy óra kártyát ebbe az új fájlba. (`<article className="ora">...</article>`)
 
-  - ```js
-    app.get("/", (req, res) => {
-      res.send("Hello World!");
-    });
-    ```
-
-- Itt egy `users` tömb kezdésnek:
-
-  - ```js
-    const users = [
-      {
-        id: "1",
-        name: "John Doe",
-        email: "john.doe@example.com",
-      },
-      {
-        id: "2",
-        name: "Jane Smith",
-        email: "jane.smith@example.com",
-      },
-      {
-        id: "3",
-        name: "Sam Johnson",
-        email: "sam.johnson@example.com",
-      },
-    ];
-    ```
-
-### A megoldáshoz elérhető néhány segítség:
+3. Az `App.tsx`-ben definiálj state-ként egy tömböt, amiben tárolod az [assets/orak.js](./assets/orak.js) fájlban lévő előre elkészített tömböt.
 
 <details>
-<summary>1. segítség: endpointok definiálása</summary>
+<summary>Segítség: hogyan kell state-et definiálni?</summary>
 
-```js
-// GET
-app.get("/", (req, res) => {});
+**Példa:**
 
-// POST
-app.post("/", (req, res) => {});
+```jsx
+import { useState } from "react";
 
-// PUT
-app.put("/", (req, res) => {});
+const App = () => {
+  const [stateNeve, setStateNeve] = useState("kezdőérték");
 
-// DELETE
-app.dELETE("/", (req, res) => {});
-```
-
-</details>
-
-<details>
-<summary>2. segítség: JSON és státuszkód visszaküldése válaszként</summary>
-
-```js
-// Csak JSON:
-res.json(xxx);
-
-// JSON és státuszkód:
-res.status(201).json(xxx);
-
-// Csak státuszkód:
-res.sendStatus(204);
-```
-
-</details>
-
-<details>
-<summary>3. segítség: paraméter fogadása az URL-ben</summary>
-
-```js
-app.get("/api/users/:id", (req, res) => {
-  const id = req.params.id; // Az URL-ben a :id mint név és ez a név megegyezik
-});
-
-// Másik példa:
-app.get("/api/users/:slug", (req, res) => {
-  const slug = req.params.slug;
-});
-```
-
-</details>
-
-<details>
-<summary>4. segítség: create, update, delete műveletek a users tömbben - példa</summary>
-
-```js
-// create:
-users.push({
-  name: "Teszt Elek",
-  email: "teszti@example.com",
-  id: crypto.randomUUID(),
-});
-
-// update:
-const id = 1;
-const updatedUser = {
-  id,
-  name: "Teszt Elek",
-  email: "teszti@example.com",
+  // további kód
+  // return ...
 };
-users = users.map((u) => (u.id === id ? updatedUser : u));
 
-// delete
-const id = 1;
-users = users.filter((x) => x.id !== id);
+export default App;
+```
+
+Neked az [assets/orak.js](./assets/orak.js) fájlban levő tömböt kell betenned a `"kezdőérték"` helyett, valamint valami beszédesebb nevet adni a state-nek.
+
+</details>
+
+<br />
+
+4. Az előbb elkészített tömbünk alapján dinamikusan jelenítsük meg az `OraCard` komponenseinket. Ehhez használjuk a JavaScript `.map` függvényét. A kártya prop-ként fogadja az `index`-et, valamint az `ora` objectet. Key-nek állítsuk be az óra id-jét.
+
+<details>
+<summary>Megoldás</summary>
+
+```jsx
+<section className="ora-grid">
+  {orak.map((ora, index) => (
+    <OraCard key={ora.id} ora={ora} index={index} />
+  ))}
+</section>
+```
+
+Ne felejtsük importálni az `OraCard`-ot!
+
+```jsx
+import OraCard from "./components/OraCard";
 ```
 
 </details>
 
 <br />
 
-Továbbá bátran kérd a mentorok segítségét, vagy nézd meg a megoldást a [`module-2/workshop-solution`](./workshop-solution) mappában, ha teljesen elakadtál!
+5. Jelenleg az `OraCard` komponensünk még semmit nem csinál a neki adott propokkal. Ezen változtassunk! Az átadott prop-ok alapján cseréljük le az óra címét, leírását, valamint azt, hogy hányadik óra (az index alapján (`index + 1`)). A megoldást [itt](./workshop-solution/src/components/OraCard.jsx) találod.
 
-## API tesztelése
+## Teljes óraszám számláló
 
-- Telepítsd a Thunder Client extension-t a VS Code-ba: [https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-- Teszteld az elkészített endpointokat Thunder Client-tel
+1. Készítsünk egy új state-et az `App.tsx`-ben a teljes óraszám tárolására. A kezdőérték legyen `32`.
+
+<details>
+<summary>Megoldás</summary>
+
+```jsx
+const [teljesOraszam, setTeljesOraszam] = useState(32);
+```
+
+</details>
+
+<br />
+
+2. Jelenítsük meg ezen state értékét a megfelelő helyen, majd a két mellete levő gombra tegyünk egy `onClick` eseménykezelőt, amivel **növelni/csökkenteni** lehet a teljes óraszámot. Ha mindent jól csináltál, már a gombok kattintásával módosítható ez a 32-es érték.
+
+<details>
+<summary>Megoldás</summary>
+
+```jsx
+<button className="icon-button" onClick={() => setTeljesOraszam(prev => prev + 1)}>+</button>
+<span className="font-semibold">{teljesOraszam}</span>
+<button className="icon-button" onClick={() => setTeljesOraszam(prev => Math.max(prev - 1, 0))}>-</button>
+```
+
+</details>
+
+<br />
+
+3. A hiányzó órákat már ki tudjuk számolni az órák tömb hosszából és a teljes órák számából. Ezt ugyan úgy a JSX-ben elévgezhetjük kapcsos zárójelek között: `<span className="font-semibold">{teljesOraszam - orak.length}</span>`
+
+<hr />
+
+> [!NOTE]  
+> Ha nem sikerült, a megoldást a [module-2/workshop-solution](./workshop-solution/) mappában találod.  
+> Elakadás esetén fordulj a mentorodhoz!

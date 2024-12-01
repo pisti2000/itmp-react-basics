@@ -97,5 +97,8 @@ A jelenlegi projektünkben 2 helyen használunk inline style-ingot. Ha HTML-ben 
 
 5. Ha mindez megvan, akkor látnunk kell az appunkat az oldalon (a konzolon hiba nélkül), viszont itt még nem működik semmi.
 
-Ha nem sikerült, a megoldást a [module-1/workshop-solution](./workshop-solution/) mappában találod.  
-Elakadás esetén fordulj a mentorodhoz!
+<hr />
+
+> [!NOTE]  
+> Ha nem sikerült, a megoldást a [module-1/workshop-solution](./workshop-solution/) mappában találod.  
+> Elakadás esetén fordulj a mentorodhoz!

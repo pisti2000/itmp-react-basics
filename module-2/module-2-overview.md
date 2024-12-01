@@ -1,7 +1,7 @@
 # 2. modul elméleti áttekintés és demo - Express CRUD
 
 - Mik a komponensek?
-- Demo: Statikus komponens létrehozása a kártyának
+- Demo: Statikus komponens létrehozása az óra kártyának
 - Mi az a prop?
 - Demo: Kártya komponens update: prop-ból jön az adat (már 3 kártya)
 - Demo: Adatforrás használata és map-elés
@@ -17,7 +17,7 @@
   - Jobb karbantarthatóság: Ha változik egy komponens logikája, csak egy helyen kell módosítanod.
   - Olvashatóbb kódot eredményez: Az alkalmazás logikája kisebb, könnyen érthető részekre bontható.
 
-## Demo: Statikus komponens létrehozása a kártyának
+## Demo: Statikus komponens létrehozása az óra kártyának
 
 ## Mi az a prop?
 
