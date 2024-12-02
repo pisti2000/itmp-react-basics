@@ -1,4 +1,4 @@
-# 2. modul elméleti áttekintés és demo - Express CRUD
+# 2. modul elméleti áttekintés és demo - Komponensek, prop-ok és állapotkezelés
 
 - Mik a komponensek?
 - Demo: Statikus komponens létrehozása az óra kártyának
@@ -48,7 +48,7 @@
     - Csak React komponensekben vagy saját hook-okban használható.
 
 - **Mi az a state?**
-  - A state a React egyik alapfogalma, amely lehetővé teszi, hogy a komponensek „emlékezzenek” az aktuális állapotukra. Ez dinamikus felhasználói interakciókat tesz lehetővé, például űrlapok kitöltését vagy gombok kattintását.
+  - A state a React egyik alapfogalma, amely lehetővé teszi, hogy a komponensek "emlékezzenek" az aktuális állapotukra. Ez dinamikus felhasználói interakciókat tesz lehetővé, például űrlapok kitöltését vagy gombok kattintását.
 
 ## Demo: Adatforrás használata és map-elés
 

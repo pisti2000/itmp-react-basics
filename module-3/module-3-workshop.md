@@ -1,4 +1,4 @@
-# 3. modul workshop - Adatbázist a backendünknek!
+# 3. modul workshop - Űrlap-, esemény- és haladó állapotkezelés
 
 - Projekt inicializálása
 - SQLite adatbázis telepítés, létrehozás

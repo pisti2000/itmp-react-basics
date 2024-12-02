@@ -25,7 +25,7 @@ Az ismertetők és élő bemutatókon túl – ahogy azt már az ITMP-kurzusokon
 | 09:15 - 09:45     | 1. modul elméleti áttekintés - Sisák Zoltán és Mrakovics Olivér         |
 | 09:45 - 10:45     | 1. modul workshop - kiscsoportos, mentorált gyakorlat                   |
 | _10:45 - 11:00_   | _Kávészünet_                                                            |
-| **11:00 - 13:30** | **2. modul - Komponensek, props-ok és állapotkezelés**                  |
+| **11:00 - 13:30** | **2. modul - Komponensek, prop-ok és állapotkezelés**                   |
 | 11:00 - 11:30     | 2. modul elméleti áttekintés és demó - Sisák Zoltán és Mrakovics Olivér |
 | 11:30 - 12:30     | 2. modul workshop - kiscsoportos, mentorált gyakorlat                   |
 | _12:30 - 13:30_   | _Ebédszünet_                                                            |

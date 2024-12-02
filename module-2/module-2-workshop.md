@@ -1,4 +1,4 @@
-# 2. modul workshop - Node.js és Express CRUD alkalmazás elkészítése
+# 2. modul workshop - Komponensek, prop-ok és állapotkezelés
 
 - Komponens létrehozása az óra kártyának
 - Órák tárolása tömbben
