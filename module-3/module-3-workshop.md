@@ -140,6 +140,54 @@ A megoldást [itt](./workshop-solution/src/components/OraForm.jsx) találod, hog
 
 6. Ha mindent jól csináltál, akkor működik a form. Viszont ahogy látod, hozzáadás után nem törli az `input`-ok értékét, ez nem a legjobb felhasználói élmény. Ezt szorgalmi feladat megoldani!
 
-> [!NOTE]  
-> Ha nem sikerült, a megoldást a [module-3/workshop-solution](./workshop-solution/) mappában találod.  
+## Kártya törlése
+
+1. Az `OraCard` komponens fogadjon egy `onDelete` prop-ot: `const OraCard = ({ ora, index, onDelete }) => {`
+
+2. Van egy szemetes emojival jelölt `button`. Ez lesz a törlés gombunk.  
+   Reagálj a gomb kattintására, ami szokás szerint egy callback-et fogadjon. Ebben a callback-ben hívd meg az `onDelete` függvényt (ami a prop-ból jön), és add át neki az `ora` változót.
+
+<details>
+<summary>Megoldás</summary>
+
+```jsx
+<button className="icon-button" onClick={() => onDelete(ora)}>
+  🗑️
+</button>
+```
+
+</details>
+
+<br />
+
+3. Az `App.tsx` komponensben ott, ahol kimapeljük az `OraCard`-okat, a komponensnek add át az `onDelete` függvényt is. Ez legyen egy callback, ami a JavaScript `.filter` metódusát használva update-eli a state-et, és kiszűri az aktuális azonosítójú órát.
+
+<details>
+<summary>Megoldás</summary>
+
+```jsx
+<section className="ora-grid">
+  {orak.map((ora, index) => (
+    <OraCard
+      key={ora.id}
+      ora={ora}
+      index={index}
+      onDelete={(o) => setOrak((prev) => prev.filter((x) => x.id !== o.id))}
+    />
+  ))}
+</section>
+```
+
+</details>
+
+<br />
+
+## Szorgalmi feladat
+
+- Jelenleg nem lehet szerkeszteni az óra kártyát, de a gomb ott van neki. Ennek a funkcionalitását készítsd el úgy, hogyha az edit gombra nyom a felhasználó, akkor betölti a kártya adatait a fenti form-ba, a "Hozzáadás" gomb lecserélődik "Ment" gombra, valamint a "Mégsem" gomb is megjelenik. Mindegyik gombnak működnie kell.
+
+<hr />
+
+> [!NOTE]
+> Ha nem sikerült, a megoldást a [module-3/workshop-solution](./workshop-solution/) mappában találod.
 > Elakadás esetén fordulj a mentorodhoz!

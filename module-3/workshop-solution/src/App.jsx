@@ -84,7 +84,14 @@ const App = () => {
 
       <section className="ora-grid">
         {orak.map((ora, index) => (
-          <OraCard key={ora.id} ora={ora} index={index} />
+          <OraCard
+            key={ora.id}
+            ora={ora}
+            index={index}
+            onDelete={(o) =>
+              setOrak((prev) => prev.filter((x) => x.id !== o.id))
+            }
+          />
         ))}
       </section>
     </main>
