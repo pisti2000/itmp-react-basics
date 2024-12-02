@@ -1,5 +1,6 @@
 import { useState } from "react";
 import OraCard from "./components/OraCard";
+import OraForm from "./components/OraForm";
 
 const App = () => {
   const [temakorokShown, setTemakorokShown] = useState(true);
@@ -79,16 +80,7 @@ const App = () => {
 
       <hr />
 
-      <form action="#">
-        <div className="col">
-          <input type="text" placeholder="Cím" />
-          <textarea placeholder="Leírás" rows="5"></textarea>
-        </div>
-        <aside className="col">
-          <button className="btn">Hozzáadás</button>
-          <button className="btn outline">Mégsem</button>
-        </aside>
-      </form>
+      <OraForm onOraAdd={(newOra) => setOrak((prev) => [...prev, newOra])} />
 
       <section className="ora-grid">
         {orak.map((ora, index) => (
