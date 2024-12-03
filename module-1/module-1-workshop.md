@@ -5,8 +5,8 @@
 - Template elkészítése JSX-ben
 
 > [!NOTE]  
-> **Cél:**  
-> Minden szükséges eszköz telepítve legyen a számítógépen: Node.js, NPM, Visual Studio Code. Legyen létrehozva egy React projekt. A kapott HTML template-et alapul véve készítsük el ennek a JSX változatát.
+> **Feladat:**  
+> Legyen létrehozva egy React projekt. A kapott HTML template-et alapul véve készítsd el ennek a JSX változatát.
 
 <hr />
 
@@ -26,11 +26,11 @@
 
 1. Nyiss egy terminált, és futtasd a következő parancsot: `npm create vite@latest`. Ha kérdez valamit, nyomd meg az `y`-t!
 2. Adj nevet a projektnek (például: `tanmenet-app`), majd válaszd ki a `React + JavaScript` opciót. (nyilakkal lehet lépni, majd enter)
-3. Nyissuk meg a legenerált `tanmenet-app` projektet Visual Studio Code-ban.
+3. Nyisd meg a legenerált `tanmenet-app` projektet Visual Studio Code-ban.
 4. Nyiss egy terminált a VS Code-ban, és telepítsd a függőségeket: `npm install`
-5. Indítsd el a fejlesztői szervert: `npm run dev`
-6. Töröld a felesleges file-okat: `src/assets/`, `App.css`
-7. Az `src/index.css` fájlban törölj mindent
+5. Indítsd el a fejlesztői szervert: `npm run dev`. Az alkalmazás a [http://localhost:5173](http://localhost:5173) URL-en lesz elérhető.
+6. Töröld a felesleges file-okat és mappákat: `src/assets/`, `App.css`
+7. Az `src/index.css` fájlban törölj mindent. Saját CSS-ünk lesz!
 8. Az `src/App.tsx` tartalma legyen csak ennyi:
 
    ```jsx
@@ -41,7 +41,7 @@
    export default App;
    ```
 
-Akkor jó, ha az oldalon csak a "Hello, ITMP!" szöveget látjuk. Nem kell újraindítani a szervert, automatikusan frissül.
+Akkor jó, ha az oldalon csak a "Hello, ITMP!" szöveget látod. Nem kell újraindítani a szervert, automatikusan frissül.
 
 ## Template elkészítése JSX-ben
 
@@ -75,7 +75,7 @@ Ahhoz szoktunk, hogy HTML-ben a tagekhez a `class` kulcsszóval rendelünk oszt�
 <details>
 <summary>2. segítség: inline style</summary>
 
-A jelenlegi projektünkben 2 helyen használunk inline style-ingot. Ha HTML-ben tesszük ezt meg, akkor csak simán egy string-et kell használnunk. Ezzel szemben JSX-ben egy JavaScript objectet kell átadnunk a style attribútumnak. Például:
+A jelenlegi projektünkben 2 helyen használunk inline style-t. Ha HTML-ben tesszük ezt meg, akkor csak simán egy string-et használunk. Ezzel szemben JSX-ben egy JavaScript objectet kell átadni a style attribútumnak:
 
 **HTML példa:**
 
@@ -93,9 +93,7 @@ A jelenlegi projektünkben 2 helyen használunk inline style-ingot. Ha HTML-ben 
 
 </details>
 
-<br />
-
-5. Ha mindez megvan, akkor látnunk kell az appunkat az oldalon (a konzolon hiba nélkül), viszont itt még nem működik semmi.
+5. Ha mindez megvan, akkor látnod kell az alkalmazást az oldalon (a konzolon hiba nélkül), viszont itt még nem működik semmi.
 
 <hr />
 
