@@ -1,12 +1,12 @@
 # 2. modul elméleti áttekintés és demo - Komponensek, prop-ok és állapotkezelés
 
 - Mik a komponensek?
-- Demo: Statikus komponens létrehozása az óra kártyának
+- Demo: Tanóra kártya elkészítése statikus komponensként
 - Mi az a prop?
-- Demo: Kártya komponens update: prop-ból jön az adat (már 3 kártya)
+- Demo: 3 kártya komponens elkészítése: a komponens példányok egyéni tulajdonságainak átadása prop-ok segítségével
 - Demo: Adatforrás használata és map-elés
-- Mi az a state? (hookokról általában)
-- Demo: Teljes óraszám számláló
+- Mik azok a hookok és mi az a state?
+- Demo: Teljes óraszám számláló megvalósítása állapotkezeléssel
 
 ## Mik a komponensek?
 
@@ -17,7 +17,7 @@
   - Jobb karbantarthatóság: Ha változik egy komponens logikája, csak egy helyen kell módosítanod.
   - Olvashatóbb kódot eredményez: Az alkalmazás logikája kisebb, könnyen érthető részekre bontható.
 
-## Demo: Statikus komponens létrehozása az óra kártyának
+## Demo: Tanóra kártya elkészítése statikus komponensként
 
 ## Mi az a prop?
 
@@ -34,7 +34,7 @@
   - Újrafelhasználhatóság: Ugyanaz a komponens különböző adatokat kezelhet attól függően, hogy milyen prop-okat kap.
   - Átláthatóság: Könnyen nyomon követhető az adatáramlás a komponensek között.
 
-## Demo: Kártya komponens update – prop-ból jön az adat
+## Demo: 3 kártya komponens elkészítése: a komponens példányok egyéni tulajdonságainak átadása prop-ok segítségével
 
 ## Mi az a state? (hookokról általában)
 
