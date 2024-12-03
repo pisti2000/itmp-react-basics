@@ -41,7 +41,7 @@ A **Vite** egy modern eszköz, amely gyorsabb fejlesztői környezetet biztosít
 
 - **Miért hasznos?**:
   - Könnyebb vizualizálni a komponensek struktúráját.
-  - Közvetlenül összekapcsolja az adatokat és az UI-t (például változókat ágyazhatunk be HTML-be).
+  - Közvetlenül összekapcsolja az adatokat és a UI-t (például változókat ágyazhatunk be HTML-be).
 
 ## Styling alkalmazása
 
@@ -62,7 +62,7 @@ A **Vite** egy modern eszköz, amely gyorsabb fejlesztői környezetet biztosít
 
 Amikor egy React alkalmazást elkészítünk, az általában fejlesztői módban fut, ahol a kódot élőben szerkeszthetjük, és azonnal láthatjuk a változtatásokat. Azonban amikor az alkalmazást éles környezetbe szeretnénk telepíteni – például egy szerverre vagy tárhelyre –, akkor azt "buildelni" kell. Ez a folyamat optimalizálja az alkalmazást, hogy gyorsan és hatékonyan működjön a felhasználóknál.
 
-- **Mit jelent a buildelés?**:
+- **Mit jelent a buildelés?**
 
   - Kód optimalizálása: A build folyamat összecsomagolja, minimalizálja (csökkenti a méretét), és hatékonyabbá teszi az alkalmazás kódját.
   - Fejlesztői kód eltávolítása: A fejlesztés közben használt extra eszközöket (pl. hibakereső üzeneteket) eltávolítja, hogy az alkalmazás csak azt tartalmazza, ami a működéséhez szükséges.
