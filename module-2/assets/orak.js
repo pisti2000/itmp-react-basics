@@ -1,20 +1,28 @@
 const orak = [
   {
     id: 1,
-    title: "Algoritmusok alapjai",
-    description:
-      "Az algoritmusok alapjai, az algoritmusok jellemzői, az algoritmusok felépítése, az algoritmusok leírása, az algoritmusok jelölése, algoritmusok példák.",
+    title: "Bevezetés a webfejlesztésbe",
+    description: "Weboldalak működése és HTML áttekintés.",
   },
   {
     id: 2,
-    title: "Változók és adattípusok",
+    title: "Fejlesztői környezetek",
     description:
-      "Változó fogalma, típusai, deklarálás, értékadás, típusok, típuskonverzió, operátorok, kifejezések, utasítások.",
+      "Az online és a professzionális fejlesztői eszközök áttekintése. A Visual Studio Code telepítése és alapvető használatának bemutatása.",
   },
   {
     id: 3,
-    title: "Feltételes elágazások",
-    description:
-      "Feltételes szerkezetek, if, if-else, if-else if, switch-case, ternary operátor, logikai operátorok.",
+    title: "Alapvető HTML tagek",
+    description: "Legfontosabb tagek használata: h1-h6, p, img, a.",
+  },
+  {
+    id: 4,
+    title: "HTML attribútumok és szövegformázás",
+    description: "Attribútumok: id, class, és szövegformázás.",
+  },
+  {
+    id: 5,
+    title: "HTML listák és táblázatok",
+    description: "Listaelemek (ul, ol) és táblázatok (table).",
   },
 ];

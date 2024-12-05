@@ -6,21 +6,29 @@ const App = () => {
   const [orak, setOrak] = useState([
     {
       id: 1,
-      title: "Algoritmusok alapjai",
-      description:
-        "Az algoritmusok alapjai, az algoritmusok jellemzői, az algoritmusok felépítése, az algoritmusok leírása, az algoritmusok jelölése, algoritmusok példák.",
+      title: "Bevezetés a webfejlesztésbe",
+      description: "Weboldalak működése és HTML áttekintés.",
     },
     {
       id: 2,
-      title: "Változók és adattípusok",
+      title: "Fejlesztői környezetek",
       description:
-        "Változó fogalma, típusai, deklarálás, értékadás, típusok, típuskonverzió, operátorok, kifejezések, utasítások.",
+        "Az online és a professzionális fejlesztői eszközök áttekintése. A Visual Studio Code telepítése és alapvető használatának bemutatása.",
     },
     {
       id: 3,
-      title: "Feltételes elágazások",
-      description:
-        "Feltételes szerkezetek, if, if-else, if-else if, switch-case, ternary operátor, logikai operátorok.",
+      title: "Alapvető HTML tagek",
+      description: "Legfontosabb tagek használata: h1-h6, p, img, a.",
+    },
+    {
+      id: 4,
+      title: "HTML attribútumok és szövegformázás",
+      description: "Attribútumok: id, class, és szövegformázás.",
+    },
+    {
+      id: 5,
+      title: "HTML listák és táblázatok",
+      description: "Listaelemek (ul, ol) és táblázatok (table).",
     },
   ]);
 
@@ -58,14 +66,22 @@ const App = () => {
       <section style={{ padding: "0 2rem" }}>
         <button className="temakor-button">Témakörök elrejtése</button>
         <ul className="temakor-ul">
-          <li>Algoritmusok alapjai</li>
-          <li>Változók és adattípusok</li>
-          <li>Feltételes elágazások</li>
-          <li>Ciklusok</li>
-          <li>Függvények</li>
-          <li>Adatszerkezetek (tömbök, listák)</li>
-          <li>Hibakezelés alapjai</li>
-          <li>Be- és kimeneti műveletek</li>
+          <li>Bevezetés a webfejlesztésbe: HTML és CSS alapok</li>
+          <li>
+            Fejlesztői környezetek és eszközök: Visual Studio Code, Git
+            használata
+          </li>
+          <li>
+            HTML tagek és attribútumok: weboldal-struktúra és tartalom
+            kialakítása
+          </li>
+          <li>
+            CSS alapjai: formázás, színek, box modell és reszponzív design
+          </li>
+          <li>JavaScript alapok: változók, események, és DOM manipuláció</li>
+          <li>Projektmunka: reszponzív weboldal tervezése és fejlesztése</li>
+          <li>Hibakeresési technikák: fejlesztői eszközök és validáció</li>
+          <li>Projektek bemutatása és értékelése</li>
         </ul>
       </section>
 

@@ -23,14 +23,22 @@ const App = () => {
       <section style={{ padding: "0 2rem" }}>
         <button className="temakor-button">Témakörök elrejtése</button>
         <ul className="temakor-ul">
-          <li>Algoritmusok alapjai</li>
-          <li>Változók és adattípusok</li>
-          <li>Feltételes elágazások</li>
-          <li>Ciklusok</li>
-          <li>Függvények</li>
-          <li>Adatszerkezetek (tömbök, listák)</li>
-          <li>Hibakezelés alapjai</li>
-          <li>Be- és kimeneti műveletek</li>
+          <li>Bevezetés a webfejlesztésbe: HTML és CSS alapok</li>
+          <li>
+            Fejlesztői környezetek és eszközök: Visual Studio Code, Git
+            használata
+          </li>
+          <li>
+            HTML tagek és attribútumok: weboldal-struktúra és tartalom
+            kialakítása
+          </li>
+          <li>
+            CSS alapjai: formázás, színek, box modell és reszponzív design
+          </li>
+          <li>JavaScript alapok: változók, események, és DOM manipuláció</li>
+          <li>Projektmunka: reszponzív weboldal tervezése és fejlesztése</li>
+          <li>Hibakeresési technikák: fejlesztői eszközök és validáció</li>
+          <li>Projektek bemutatása és értékelése</li>
         </ul>
       </section>
 
@@ -54,12 +62,8 @@ const App = () => {
             <button className="icon-button">📝</button>
             <button className="icon-button">🗑️</button>
           </header>
-          <h4>Algoritmusok alapjai</h4>
-          <p>
-            Az algoritmusok alapjai, az algoritmusok jellemzői, az algoritmusok
-            felépítése, az algoritmusok leírása, az algoritmusok jelölése,
-            algoritmusok példák.
-          </p>
+          <h4>Bevezetés a webfejlesztésbe</h4>
+          <p>Weboldalak működése és HTML áttekintés.</p>
         </article>
       </section>
     </main>
