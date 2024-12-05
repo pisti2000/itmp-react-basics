@@ -1,11 +1,11 @@
 # 1. modul elméleti áttekintés - React és JSX
 
 - Mi az a React?
-- Demo: HTML/CSS kártyák létrehozása – Probléma bemutatása
+- Demo: HTML/CSS kártyák létrehozása - Probléma bemutatása
 - Demo: React projekt inicializálása
 - Mi az a JSX?
 - Styling alkalmazása
-- Demo: Kártya elkészítése JSX-ben
+- Demo: Template elkészítése JSX-ben
 - Demo: Project buildelése
 
 ## Mi az a React?
