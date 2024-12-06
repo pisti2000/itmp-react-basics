@@ -1,297 +1,297 @@
 [
   {
-    "id": 1,
-    "title": "Bevezetés a webfejlesztésbe",
-    "description": "Weboldalak működése és HTML áttekintés."
+    "oraSzam": 1,
+    "cim": "Bevezetés a webfejlesztésbe",
+    "leiras": "Weboldalak működése és HTML áttekintés."
   },
   {
-    "id": 2,
-    "title": "Fejlesztői környezetek",
-    "description": "Az online és a professzionális fejlesztői eszközök áttekintése. A Visual Studio Code telepítése és alapvető használatának bemutatása."
+    "oraSzam": 2,
+    "cim": "Fejlesztői környezetek",
+    "leiras": "Az online és a professzionális fejlesztői eszközök áttekintése. A Visual Studio Code telepítése és alapvető használatának bemutatása."
   },
   {
-    "id": 3,
-    "title": "Alapvető HTML tagek",
-    "description": "Legfontosabb tagek használata: h1-h6, p, img, a."
+    "oraSzam": 3,
+    "cim": "Alapvető HTML tagek",
+    "leiras": "Legfontosabb tagek használata: h1-h6, p, img, a."
   },
   {
-    "id": 4,
-    "title": "HTML attribútumok és szövegformázás",
-    "description": "Attribútumok: id, class, és szövegformázás."
+    "oraSzam": 4,
+    "cim": "HTML attribútumok és szövegformázás",
+    "leiras": "Attribútumok: id, class, és szövegformázás."
   },
   {
-    "id": 5,
-    "title": "HTML listák és táblázatok",
-    "description": "Listaelemek (ul, ol) és táblázatok (table)."
+    "oraSzam": 5,
+    "cim": "HTML listák és táblázatok",
+    "leiras": "Listaelemek (ul, ol) és táblázatok (table)."
   },
   {
-    "id": 6,
-    "title": "Weboldal-struktúra kialakítása",
-    "description": "HTML5 tagek: div, header, footer, nav."
+    "oraSzam": 6,
+    "cim": "Weboldal-struktúra kialakítása",
+    "leiras": "HTML5 tagek: div, header, footer, nav."
   },
   {
-    "id": 7,
-    "title": "HTML5 új elemei",
-    "description": "Section, article, figure, figcaption használata."
+    "oraSzam": 7,
+    "cim": "HTML5 új elemei",
+    "leiras": "Section, article, figure, figcaption használata."
   },
   {
-    "id": 8,
-    "title": "Űrlapok létrehozása HTML-ben",
-    "description": "Input, textarea, select, és button bemutatása."
+    "oraSzam": 8,
+    "cim": "Űrlapok létrehozása HTML-ben",
+    "leiras": "Input, textarea, select, és button bemutatása."
   },
   {
-    "id": 9,
-    "title": "Űrlap attribútumok és validálás",
-    "description": "Form validálás HTML eszközökkel."
+    "oraSzam": 9,
+    "cim": "Űrlap attribútumok és validálás",
+    "leiras": "Form validálás HTML eszközökkel."
   },
   {
-    "id": 10,
-    "title": "Beágyazott média",
-    "description": "Video, audio, és iframe használata weboldalakon."
+    "oraSzam": 10,
+    "cim": "Beágyazott média",
+    "leiras": "Video, audio, és iframe használata weboldalakon."
   },
   {
-    "id": 11,
-    "title": "Egyszerű weboldal létrehozása",
-    "description": "HTML segítségével egy alap oldal készítése."
+    "oraSzam": 11,
+    "cim": "Egyszerű weboldal létrehozása",
+    "leiras": "HTML segítségével egy alap oldal készítése."
   },
   {
-    "id": 12,
-    "title": "Weboldal hierarchikus szerkezete",
-    "description": "HTML tagek strukturált elhelyezése."
+    "oraSzam": 12,
+    "cim": "Weboldal hierarchikus szerkezete",
+    "leiras": "HTML tagek strukturált elhelyezése."
   },
   {
-    "id": 13,
-    "title": "Hibakeresési technikák",
-    "description": "Hiányzó tagek és hibák azonosítása."
+    "oraSzam": 13,
+    "cim": "Hibakeresési technikák",
+    "leiras": "Hiányzó tagek és hibák azonosítása."
   },
   {
-    "id": 14,
-    "title": "Mini projekt: személyes oldal",
-    "description": "Személyes bemutatkozó oldal létrehozása."
+    "oraSzam": 14,
+    "cim": "Mini projekt: személyes oldal",
+    "leiras": "Személyes bemutatkozó oldal létrehozása."
   },
   {
-    "id": 15,
-    "title": "HTML számonkérés",
-    "description": "Tudás ellenőrzése és visszajelzés."
+    "oraSzam": 15,
+    "cim": "HTML számonkérés",
+    "leiras": "Tudás ellenőrzése és visszajelzés."
   },
   {
-    "id": 16,
-    "title": "CSS alapjai",
-    "description": "Inline, internal, és external CSS bemutatása."
+    "oraSzam": 16,
+    "cim": "CSS alapjai",
+    "leiras": "Inline, internal, és external CSS bemutatása."
   },
   {
-    "id": 17,
-    "title": "Színek és háttérképek",
-    "description": "Színek, árnyalatok, és háttérképek használata."
+    "oraSzam": 17,
+    "cim": "Színek és háttérképek",
+    "leiras": "Színek, árnyalatok, és háttérképek használata."
   },
   {
-    "id": 18,
-    "title": "Betűtípusok és szövegformázás",
-    "description": "Font-family, font-size, és text-align."
+    "oraSzam": 18,
+    "cim": "Betűtípusok és szövegformázás",
+    "leiras": "Font-family, font-size, és text-align."
   },
   {
-    "id": 19,
-    "title": "Box modell",
-    "description": "Szegélyek, margók, és padding használata."
+    "oraSzam": 19,
+    "cim": "Box modell",
+    "leiras": "Szegélyek, margók, és padding használata."
   },
   {
-    "id": 20,
-    "title": "CSS pozicionálás",
-    "description": "Relatív, abszolút, és fix pozicionálás."
+    "oraSzam": 20,
+    "cim": "CSS pozicionálás",
+    "leiras": "Relatív, abszolút, és fix pozicionálás."
   },
   {
-    "id": 21,
-    "title": "CSS szelektorok",
-    "description": "Alap és haladó szelektorok bemutatása."
+    "oraSzam": 21,
+    "cim": "CSS szelektorok",
+    "leiras": "Alap és haladó szelektorok bemutatása."
   },
   {
-    "id": 22,
-    "title": "Reszponzív tervezés alapjai",
-    "description": "Média lekérdezések használata reszponzív tervezéshez."
+    "oraSzam": 22,
+    "cim": "Reszponzív tervezés alapjai",
+    "leiras": "Média lekérdezések használata reszponzív tervezéshez."
   },
   {
-    "id": 23,
-    "title": "Bootstrap alapok",
-    "description": "Bootstrap grid rendszer bemutatása."
+    "oraSzam": 23,
+    "cim": "Bootstrap alapok",
+    "leiras": "Bootstrap grid rendszer bemutatása."
   },
   {
-    "id": 24,
-    "title": "Bootstrap komponensek",
-    "description": "Gombok, kártyák, és más elemek használata."
+    "oraSzam": 24,
+    "cim": "Bootstrap komponensek",
+    "leiras": "Gombok, kártyák, és más elemek használata."
   },
   {
-    "id": 25,
-    "title": "Haladó CSS",
-    "description": "Animációk és átmenetek készítése."
+    "oraSzam": 25,
+    "cim": "Haladó CSS",
+    "leiras": "Animációk és átmenetek készítése."
   },
   {
-    "id": 26,
-    "title": "Weboldalak validálása",
-    "description": "CSS hibák azonosítása és javítása."
+    "oraSzam": 26,
+    "cim": "Weboldalak validálása",
+    "leiras": "CSS hibák azonosítása és javítása."
   },
   {
-    "id": 27,
-    "title": "Mini projekt: reszponzív oldal",
-    "description": "Reszponzív portfólió oldal készítése."
+    "oraSzam": 27,
+    "cim": "Mini projekt: reszponzív oldal",
+    "leiras": "Reszponzív portfólió oldal készítése."
   },
   {
-    "id": 28,
-    "title": "Záró gyakorlati feladat",
-    "description": "Reszponzív weboldal tervezése Bootstrap segítségével."
+    "oraSzam": 28,
+    "cim": "Záró gyakorlati feladat",
+    "leiras": "Reszponzív weboldal tervezése Bootstrap segítségével."
   },
   {
-    "id": 29,
-    "title": "CSS számonkérés",
-    "description": "Tudás ellenőrzése és visszajelzés."
+    "oraSzam": 29,
+    "cim": "CSS számonkérés",
+    "leiras": "Tudás ellenőrzése és visszajelzés."
   },
   {
-    "id": 31,
-    "title": "Bevezetés a JavaScript-be",
-    "description": "JavaScript alapok bemutatása és használata."
+    "oraSzam": 31,
+    "cim": "Bevezetés a JavaScript-be",
+    "leiras": "JavaScript alapok bemutatása és használata."
   },
   {
-    "id": 32,
-    "title": "„Hello World!” program",
-    "description": "Első JavaScript kód írása és futtatása."
+    "oraSzam": 32,
+    "cim": "„Hello World!” program",
+    "leiras": "Első JavaScript kód írása és futtatása."
   },
   {
-    "id": 33,
-    "title": "Változók és adattípusok",
-    "description": "Változók deklarálása és adattípusok kezelése."
+    "oraSzam": 33,
+    "cim": "Változók és adattípusok",
+    "leiras": "Változók deklarálása és adattípusok kezelése."
   },
   {
-    "id": 34,
-    "title": "Műveletek és operátorok",
-    "description": "Alapvető matematikai és logikai műveletek."
+    "oraSzam": 34,
+    "cim": "Műveletek és operátorok",
+    "leiras": "Alapvető matematikai és logikai műveletek."
   },
   {
-    "id": 35,
-    "title": "Események kezelése",
-    "description": "Kattintások és más események figyelése."
+    "oraSzam": 35,
+    "cim": "Események kezelése",
+    "leiras": "Kattintások és más események figyelése."
   },
   {
-    "id": 36,
-    "title": "Függvények",
-    "description": "Függvények létrehozása és paraméterek használata."
+    "oraSzam": 36,
+    "cim": "Függvények",
+    "leiras": "Függvények létrehozása és paraméterek használata."
   },
   {
-    "id": 37,
-    "title": "Feltételek és ciklusok",
-    "description": "If-else szerkezetek és for/while ciklusok."
+    "oraSzam": 37,
+    "cim": "Feltételek és ciklusok",
+    "leiras": "If-else szerkezetek és for/while ciklusok."
   },
   {
-    "id": 38,
-    "title": "Objektumok és tömbök",
-    "description": "Adatok strukturált tárolása JavaScript-ben."
+    "oraSzam": 38,
+    "cim": "Objektumok és tömbök",
+    "leiras": "Adatok strukturált tárolása JavaScript-ben."
   },
   {
-    "id": 39,
-    "title": "DOM manipuláció",
-    "description": "Weboldalelemek módosítása JavaScript segítségével."
+    "oraSzam": 39,
+    "cim": "DOM manipuláció",
+    "leiras": "Weboldalelemek módosítása JavaScript segítségével."
   },
   {
-    "id": 40,
-    "title": "Form validáció",
-    "description": "Űrlapok ellenőrzése JavaScript használatával."
+    "oraSzam": 40,
+    "cim": "Form validáció",
+    "leiras": "Űrlapok ellenőrzése JavaScript használatával."
   },
   {
-    "id": 41,
-    "title": "JavaScript hibakeresés",
-    "description": "Konzol használata hibák keresésére."
+    "oraSzam": 41,
+    "cim": "JavaScript hibakeresés",
+    "leiras": "Konzol használata hibák keresésére."
   },
   {
-    "id": 42,
-    "title": "Mini projekt: kalkulátor",
-    "description": "Egyszerű kalkulátor készítése JavaScript-tel."
+    "oraSzam": 42,
+    "cim": "Mini projekt: kalkulátor",
+    "leiras": "Egyszerű kalkulátor készítése JavaScript-tel."
   },
   {
-    "id": 43,
-    "title": "Záró feladat",
-    "description": "Interaktív weboldal létrehozása."
+    "oraSzam": 43,
+    "cim": "Záró feladat",
+    "leiras": "Interaktív weboldal létrehozása."
   },
   {
-    "id": 44,
-    "title": "JavaScript számonkérés",
-    "description": "Tudás ellenőrzése és visszajelzés."
+    "oraSzam": 44,
+    "cim": "JavaScript számonkérés",
+    "leiras": "Tudás ellenőrzése és visszajelzés."
   },
   {
-    "id": 46,
-    "title": "Projekttervezés",
-    "description": "Célok meghatározása és projekt előkészítése."
+    "oraSzam": 46,
+    "cim": "Projekttervezés",
+    "leiras": "Célok meghatározása és projekt előkészítése."
   },
   {
-    "id": 47,
-    "title": "Verziókezelés alapok",
-    "description": "Git alapvető parancsok és használat."
+    "oraSzam": 47,
+    "cim": "Verziókezelés alapok",
+    "leiras": "Git alapvető parancsok és használat."
   },
   {
-    "id": 48,
-    "title": "Távoli repository kezelése",
-    "description": "GitHub és távoli verziókezelés bemutatása."
+    "oraSzam": 48,
+    "cim": "Távoli repository kezelése",
+    "leiras": "GitHub és távoli verziókezelés bemutatása."
   },
   {
-    "id": 49,
-    "title": "Projekt setup",
-    "description": "Alapvető weboldal struktúra kialakítása."
+    "oraSzam": 49,
+    "cim": "Projekt setup",
+    "leiras": "Alapvető weboldal struktúra kialakítása."
   },
   {
-    "id": 50,
-    "title": "Reszponzív design",
-    "description": "Bootstrap alapok integrálása a projektbe."
+    "oraSzam": 50,
+    "cim": "Reszponzív design",
+    "leiras": "Bootstrap alapok integrálása a projektbe."
   },
   {
-    "id": 51,
-    "title": "Interaktív elemek hozzáadása",
-    "description": "JavaScript-tel funkciók integrálása."
+    "oraSzam": 51,
+    "cim": "Interaktív elemek hozzáadása",
+    "leiras": "JavaScript-tel funkciók integrálása."
   },
   {
-    "id": 52,
-    "title": "Hibakeresés",
-    "description": "Hibák azonosítása és javítása fejlesztőeszközökkel."
+    "oraSzam": 52,
+    "cim": "Hibakeresés",
+    "leiras": "Hibák azonosítása és javítása fejlesztőeszközökkel."
   },
   {
-    "id": 53,
-    "title": "Csoportmunka",
-    "description": "Feladatok megosztása és együttműködés GitHub-on."
+    "oraSzam": 53,
+    "cim": "Csoportmunka",
+    "leiras": "Feladatok megosztása és együttműködés GitHub-on."
   },
   {
-    "id": 54,
-    "title": "Mini projekt",
-    "description": "Egyszerű projekt csoportmunkában történő kidolgozása."
+    "oraSzam": 54,
+    "cim": "Mini projekt",
+    "leiras": "Egyszerű projekt csoportmunkában történő kidolgozása."
   },
   {
-    "id": 55,
-    "title": "Dokumentáció",
-    "description": "Projekt dokumentációjának elkészítése."
+    "oraSzam": 55,
+    "cim": "Dokumentáció",
+    "leiras": "Projekt dokumentációjának elkészítése."
   },
   {
-    "id": 56,
-    "title": "Projekt tesztelése",
-    "description": "Tesztelési technikák bemutatása."
+    "oraSzam": 56,
+    "cim": "Projekt tesztelése",
+    "leiras": "Tesztelési technikák bemutatása."
   },
   {
-    "id": 57,
-    "title": "Egyéni projekt bemutatása",
-    "description": "Tanult technikák alkalmazása egyéni munkában."
+    "oraSzam": 57,
+    "cim": "Egyéni projekt bemutatása",
+    "leiras": "Tanult technikák alkalmazása egyéni munkában."
   },
   {
-    "id": 58,
-    "title": "Csoportos projekt bemutatása",
-    "description": "Csoportmunka és együttműködés értékelése."
+    "oraSzam": 58,
+    "cim": "Csoportos projekt bemutatása",
+    "leiras": "Csoportmunka és együttműködés értékelése."
   },
   {
-    "id": 59,
-    "title": "Záró felkészülés",
-    "description": "Prezentációk előkészítése és gyakorlása."
+    "oraSzam": 59,
+    "cim": "Záró felkészülés",
+    "leiras": "Prezentációk előkészítése és gyakorlása."
   },
   {
-    "id": 60,
-    "title": "Záró bemutató",
-    "description": "Projektek bemutatása és visszajelzés."
+    "oraSzam": 60,
+    "cim": "Záró bemutató",
+    "leiras": "Projektek bemutatása és visszajelzés."
   },
   {
-    "id": 61,
-    "title": "Végső értékelés",
-    "description": "Tanultak összegzése és kiértékelés."
+    "oraSzam": 61,
+    "cim": "Végső értékelés",
+    "leiras": "Tanultak összegzése és kiértékelés."
   }
 ]
