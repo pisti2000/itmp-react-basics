@@ -41,7 +41,14 @@ const App = () => {
 
       <section className="ora-grid">
         {orak.map((ora, index) => (
-          <OraCard key={index} oraSzam={`${index + 1}. óra`} cim={ora.cim}>
+          <OraCard
+            key={index}
+            oraSzam={`${index + 1}. óra`}
+            cim={ora.cim}
+            onKartyaTorles={() =>
+              setOrak((prev) => prev.filter((ora, i) => i !== index))
+            }
+          >
             {ora.leiras}
           </OraCard>
         ))}
