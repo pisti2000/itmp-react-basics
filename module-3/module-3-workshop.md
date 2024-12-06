@@ -222,5 +222,5 @@ A megoldást [itt](./workshop-solution/src/components/OraForm.jsx) találod, hog
 <hr />
 
 > [!NOTE]
-> Ha nem sikerült, a megoldást a [module-3/workshop-solution](./workshop-solution/) mappában találod.  
+> Ha nem sikerült, a megoldást a [module-3/workshop-solution-with-edit](./workshop-solution-with-edit/) mappában találod.  
 > Elakadás esetén fordulj a mentorodhoz!
