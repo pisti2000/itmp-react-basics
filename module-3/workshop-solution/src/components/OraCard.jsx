@@ -4,7 +4,9 @@ const OraCard = (props) => {
       <header>
         <h3>{props.oraSzam}</h3>
         <button className="icon-button">📝</button>
-        <button className="icon-button">🗑️</button>
+        <button className="icon-button" onClick={props.onKartyaTorles}>
+          🗑️
+        </button>
       </header>
       <h4>{props.cim}</h4>
       <p>{props.children}</p>
