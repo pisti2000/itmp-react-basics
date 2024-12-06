@@ -68,7 +68,7 @@
 
 ## "Új óra" űrlap létrehozása
 
-1. Hozz létre egy komponenst az `src/components` mappába `OraForm` néven. Helyezzük át az `App.tsx`-ben lévő form-ot ebbe a komponensbe. A "Mégsem" gombra nem lesz szükség még, ezt kikommentelheted. Az `App.tsx`-ben a form helyére helyezzük be ezt a komponenst: `<OraForm />`. Ne felejtsd el beimportálni!
+1. Hozz létre egy komponenst az `src/components` mappába `OraForm` néven. Helyezzük át az `App.jsx`-ben lévő form-ot ebbe a komponensbe. A "Mégsem" gombra nem lesz szükség még, ezt kikommentelheted. Az `App.jsx`-ben a form helyére helyezzük be ezt a komponenst: `<OraForm />`. Ne felejtsd el beimportálni!
 
 2. Definiálj két state változót: `title`, `description`. Oldd meg azt, hogyha az inputon valaki változtat, akkor az alkalmazás mentse el az input értékét a megfelelő state-be. Ehhez használd az `onChange` eseménykezelőt. Ne felejtsd value-ként átadni a state értékét az inputnak!
 
@@ -121,7 +121,7 @@ export default OraForm;
 
 A megoldást [itt](./workshop-solution/src/components/OraForm.jsx) találod, hogyha elakadnál. A mentorod segítségét is bátran kérheted.
 
-5. Az `App.tsx`-ben add át az `onOraAdd` prop-ot az `OraForm` komponensnek. Ez legyen egy callback, ami fogadja a `newOra` változót, és `setState` hívással hozzáadja az új órát a meglévő órákhoz. Használd az array spreading operátort: `[...myArray, "newValue"]`
+5. Az `App.jsx`-ben add át az `onOraAdd` prop-ot az `OraForm` komponensnek. Ez legyen egy callback, ami fogadja a `newOra` változót, és `setState` hívással hozzáadja az új órát a meglévő órákhoz. Használd az array spreading operátort: `[...myArray, "newValue"]`
 
 <details>
 <summary>Megoldás</summary>
@@ -153,7 +153,7 @@ A megoldást [itt](./workshop-solution/src/components/OraForm.jsx) találod, hog
 
 </details>
 
-3. Az `App.tsx` komponensben ott, ahol kimapeljük az `OraCard`-okat, a komponensnek add át az `onDelete` függvényt is. Ez legyen egy callback, ami a JavaScript `.filter` metódusát használva update-eli a state-et, és kiszűri az aktuális azonosítójú órát, ezzel törölve azt.
+3. Az `App.jsx` komponensben ott, ahol kimapeljük az `OraCard`-okat, a komponensnek add át az `onDelete` függvényt is. Ez legyen egy callback, ami a JavaScript `.filter` metódusát használva update-eli a state-et, és kiszűri az aktuális azonosítójú órát, ezzel törölve azt.
 
 <details>
 <summary>Megoldás</summary>

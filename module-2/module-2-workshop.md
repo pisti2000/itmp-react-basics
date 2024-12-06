@@ -23,9 +23,9 @@
    export default OraCard;
    ```
 
-2. Az `App.tsx`-ből másolj ki egy óra kártyát ebbe az új fájlba. (Így néz ki egy kártya: `<article className="ora">...</article>`)
+2. Az `App.jsx`-ből másolj ki egy óra kártyát ebbe az új fájlba. (Így néz ki egy kártya: `<article className="ora">...</article>`)
 
-3. Az `App.tsx`-ben definiálj state-ként egy tömböt, amiben tárolod az [assets/orak.js](./assets/orak.js) fájlban lévő előre elkészített tömböt.
+3. Az `App.jsx`-ben definiálj state-ként egy tömböt, amiben tárolod az [assets/orak.js](./assets/orak.js) fájlban lévő előre elkészített tömböt.
 
 <details>
 <summary>Segítség: hogyan kell state-et definiálni?</summary>
@@ -75,7 +75,7 @@ import OraCard from "./components/OraCard";
 
 ## Teljes óraszám számláló
 
-1. Készíts egy új state-et az `App.tsx`-ben a teljes óraszám tárolására. A kezdőérték legyen `32`.
+1. Készíts egy új state-et az `App.jsx`-ben a teljes óraszám tárolására. A kezdőérték legyen `32`.
 
 <details>
 <summary>Megoldás</summary>

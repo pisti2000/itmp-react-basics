@@ -25,13 +25,14 @@
 ## React projekt inicializálása
 
 1. Nyiss egy terminált, és futtasd a következő parancsot: `npm create vite@latest`. Ha kérdez valamit, nyomd meg az `y`-t!
-2. Adj nevet a projektnek (például: `tanmenet-app`), majd válaszd ki a `React + JavaScript` opciót. (nyilakkal lehet lépni, majd enter)
+2. Adj nevet a projektnek (például: `tanmenet-app`), majd válaszd ki a `React + JavaScript` opciót. (nyilakkal lehet lépni, majd enter)  
+   Lehetőség van arra is, hogy a meglévő mappába hozd létre ezt a projektet. Ehhez a projekt nevének egy pontot (`.`) adj meg, ez ugyanis a jelenlegi mappára hivatkozik.
 3. Nyisd meg a legenerált `tanmenet-app` projektet Visual Studio Code-ban.
 4. Nyiss egy terminált a VS Code-ban, és telepítsd a függőségeket: `npm install`
 5. Indítsd el a fejlesztői szervert: `npm run dev`. Az alkalmazás a [http://localhost:5173](http://localhost:5173) URL-en lesz elérhető.
 6. Töröld a felesleges file-okat és mappákat: `src/assets/`, `App.css`
 7. Az `src/index.css` fájlban törölj mindent. Saját CSS-ünk lesz!
-8. Az `src/App.tsx` tartalma legyen csak ennyi:
+8. Az `src/App.jsx` tartalma legyen csak ennyi:
 
    ```jsx
    const App = () => {
@@ -49,7 +50,7 @@ A template-et az [/assets/template](../assets/template/) mappában találod.
 
 1. Másold át a template `style.css` fájljának tartalmát a React project `index.css` fájljába.
 2. A React projectedben keresd meg az `index.html` fájlt. és a `<title>`-t írd át erre: **Bevezetés a programozásba | Tanmenet**. Mást itt nem kell módosítanod!
-3. Másold át a template `index.html` `body`-jában található HTML-t (tehát a `main`-t és ami alatta van) az `App.tsx` `return` részéhez.
+3. Másold át a template `index.html` `body`-jában található HTML-t (tehát a `main`-t és ami alatta van) az `App.jsx` `return` részéhez.
 
    ```jsx
    const App = () => {
@@ -68,7 +69,7 @@ A template-et az [/assets/template](../assets/template/) mappában találod.
 <details>
 <summary>1. segítség: class</summary>
 
-Ahhoz szoktunk, hogy HTML-ben a tagekhez a `class` kulcsszóval rendelünk osztályokat. A JSX-ben ez nem így van, mivel a `class` JavaScript-ben egy "foglalt" kulcsszó, ezért a `className` attribútubot használjuk helyette. Tehát mindenhol, ahol most `class` van, át kell írni `className`-re.
+Ahhoz szoktunk, hogy HTML-ben a tagekhez a `class` kulcsszóval rendelünk osztályokat. A JSX-ben ez nem így van, mivel a `class` JavaScript-ben egy "foglalt" kulcsszó, ezért a `className` attribútumot használjuk helyette. Tehát mindenhol, ahol most `class` van, át kell írni `className`-re.
 
 </details>
 
