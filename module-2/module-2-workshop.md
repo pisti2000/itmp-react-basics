@@ -1,8 +1,8 @@
 # 2. modul workshop - Komponensek, prop-ok és állapotkezelés
 
-- Komponens létrehozása az óra kártyának
+- Tanóra kártya elkészítése statikus komponensként
 - Órák tárolása tömbben
-- Kártyák kimapelése a tömb alapján
+- Kártyák mapelése a tömb alapján
 - Teljes óraszám számláló
 
 > [!NOTE]  
@@ -11,71 +11,69 @@
 
 <hr />
 
-## Komponens létrehozása az óra kártyának
+## Tanóra kártya elkészítése statikus komponensként
 
-1. Hozz létre egy fájlt az `src/components` mappában `OraCard.jsx` néven, majd definiálj egy üres React komponenst!
+1. Hozz létre egy másolatot az előző gyakorlaton létrehozott `App.jsx`-ből `AppMasolat.jsx` néven.
+2. Az App.jsx-ben törölj mindent a visszaadott jsx-ből a h1 tag-en kívül.
+3. Hozz létre egy fájlt az `src/components` mappában `OraCard.jsx` néven, majd definiálj egy üres React komponenst!
 
    ```jsx
-   const OraCard = () => {
+   const OraCard = (prop) => {
      return <div>OraCard</div>;
    };
 
    export default OraCard;
    ```
 
-2. Az `App.jsx`-ből másolj ki egy óra kártyát ebbe az új fájlba. (Így néz ki egy kártya: `<article className="ora">...</article>`)
+4. Az `AppMasolat.jsx`-ből másolj ki egy óra kártyát ebbe az új fájlba a `<div>OraCard</div>` helyére. (Így néz ki egy kártya: `<article className="ora">...</article>`)
 
-3. Az `App.jsx`-ben definiálj state-ként egy tömböt, amiben tárolod az [assets/orak.js](./assets/orak.js) fájlban lévő előre elkészített tömböt.
+5. Az `App.jsx`-ben importáld be az `OraCard` komponenst, és jeleníts meg egy kártyát a komponens segítségével.
 
-<details>
-<summary>Segítség: hogyan kell state-et definiálni?</summary>
+   ```jsx
+   import OraCard from "./components/OraCard";
+   //...
+   <OraCard oraSzam="1. óra" cim="Bevezetés a webfejlesztésbe">
+     Weboldalak működése és HTML áttekintés.
+   </OraCard>;
+   ```
 
-**Példa:**
+6. Jelenleg az `OraCard` komponens még semmit nem csinál a neki adott propokkal. Ezen változtassunk! Az átadott prop-ok alapján (`{ oraSzam, cim, children }`) cseréld le az óraszámot, a címet és a leírást.  
+   A megoldást [itt](./workshop-solution/src/components/OraCard.jsx) találod.
 
-```jsx
-import { useState } from "react";
+7. Az `App.jsx`-ben hozz létre egy tömböt `orak` néven az `assets/orak.js` alapján.
 
-const App = () => {
-  const [stateNeve, setStateNeve] = useState("kezdőérték");
-
-  // további kód
-  // return ...
-};
-
-export default App;
-```
-
-Neked az [assets/orak.js](./assets/orak.js) fájlban levő tömböt kell betenned a `"kezdőérték"` helyett, valamint valami beszédesebb nevet adni a state-nek.
-
-</details>
-
-4. Az előbb elkészített tömb alapján dinamikusan jelenítsd meg az `OraCard` komponenst. Ehhez használd a JavaScript `.map` függvényét. A kártya prop-ként fogadja az `index`-et, valamint az `ora` objectet. Key-nek állítsuk be az óra id-jét.
+8. Az előbb elkészített tömb alapján dinamikusan jelenítsd meg az `OraCard` komponenst. Ehhez használd a JavaScript `.map` függvényét. A kártya prop-ként fogadja az `index`-et, valamint az `ora` objectet. Key-nek állítsuk be az óra id-jét.
 
 <details>
 <summary>Megoldás</summary>
 
 ```jsx
 <section className="ora-grid">
-  {orak.map((ora, index) => (
-    <OraCard key={ora.id} ora={ora} index={index} />
+  {orak.map((ora) => (
+    <OraCard key={ora.oraSzam} oraSzam={`${ora.oraSzam}. óra`} cim={ora.cim}>
+      {ora.leiras}
+    </OraCard>
   ))}
 </section>
 ```
 
-Ne felejtsd importálni az `OraCard`-ot!
-
-```jsx
-import OraCard from "./components/OraCard";
-```
-
 </details>
-
-1. Jelenleg az `OraCard` komponens még semmit nem csinál a neki adott propokkal. Ezen változtassunk! Az átadott prop-ok alapján (`{ ora, index }`) cseréld le az óra címét, leírását, valamint azt, hogy hányadik óra (az index alapján (`index + 1`)).  
-   A megoldást [itt](./workshop-solution/src/components/OraCard.jsx) találod.
 
 ## Teljes óraszám számláló
 
-1. Készíts egy új state-et az `App.jsx`-ben a teljes óraszám tárolására. A kezdőérték legyen `32`.
+1. Hozz létre egy fájlt az `src/components` mappában `Oraszam.jsx` néven, majd definiálj egy üres React komponenst!
+
+   ```jsx
+   const Oraszam = (prop) => {
+     return <div>Oraszam</div>;
+   };
+
+   export default Oraszam;
+   ```
+
+2. Az `AppMasolat.jsx`-ből másold ki az óraszám szekciót megvalósító kódot az új fájlba a `<div>Oraszam</div>` helyére.
+
+3. Készíts egy új state-et a teljes óraszám tárolására. A kezdőérték legyen `32`.
 
 <details>
 <summary>Megoldás</summary>
@@ -99,10 +97,21 @@ const [teljesOraszam, setTeljesOraszam] = useState(32);
 
 </details>
 
-3. A hiányzó órákat már ki tudod számolni az órák tömb hosszából és a teljes órák számából. Ezt a JSX-ben elvégezhetjük kapcsos zárójelek között: `<span className="font-semibold">{teljesOraszam - orak.length}</span>`
+3. Az App.jsx-ben importáld be az Oraszam komponenst és jelenítsd meg a komponenst a h1-es tag után. Az orakATanmenetben propban add át az orak tömb hosszát.
+
+<details>
+<summary>Megoldás</summary>
+
+```jsx
+<Oraszam orakATanmenetben={orak.length} />
+```
+
+</details>
+
+3. A hiányzó órákat már ki tudod számolni az órák tömb hosszából és a teljes órák számából. Ezt a JSX-ben elvégezhetjük kapcsos zárójelek között: `<span className="font-semibold">{teljesOraszam - props.orakATanmenetben}</span>`
 
 <hr />
 
 > [!NOTE]  
-> Ha nem sikerült, a megoldást a [module-2/workshop-solution](./workshop-solution/) mappában találod.  
+> Ha nem sikerült, a megoldást a [module-2/workshop-solution](./workshop-solution/) mappában találod.
 > Elakadás esetén fordulj a mentorodhoz!
