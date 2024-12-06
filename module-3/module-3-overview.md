@@ -1,9 +1,9 @@
 # 3. modul elméleti áttekintés és demo - Űrlap-, esemény- és haladó állapotkezelés
 
 - Kondicionális renderelés
-- Demo: "Témakörök elrejtése" gomb
-- Demo: "Új óra" űrlap létrehozása
-- Demo: kártya törlése
+- "Témakörök elrejtése" gomb
+- "Új óra" űrlap létrehozása
+- Kártya törlése
 
 ## Kondicionális renderelés
 
@@ -48,10 +48,10 @@
   - Hatékonyság: Csak azt a tartalmat rendereli, ami szükséges, ezáltal javítja az alkalmazás teljesítményét.
   - Egyszerűség: Könnyű beépíteni a meglévő komponensekbe JavaScript alapvető ismereteivel.
 
-## Demo: "Témakörök elrejtése" gomb
+## "Témakörök elrejtése" gomb
 
 - Kondicionális renderelés
 
-## Demo: „Új óra” űrlap létrehozása
+## „Új óra” űrlap létrehozása
 
-## Demo: kártya törlése
+## Kártya törlése

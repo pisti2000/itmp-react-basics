@@ -1,12 +1,13 @@
 # 2. modul elméleti áttekintés és demo - Komponensek, prop-ok és állapotkezelés
 
 - Mik a komponensek?
-- Demo: Tanóra kártya elkészítése statikus komponensként
+- Tanóra kártya elkészítése statikus komponensként
 - Mi az a prop?
-- Demo: 3 kártya komponens elkészítése: a komponens példányok egyéni tulajdonságainak átadása prop-ok segítségével
-- Demo: Adatforrás használata és map-elés
-- Mik azok a hookok és mi az a state?
-- Demo: Teljes óraszám számláló megvalósítása állapotkezeléssel
+- A komponens példányok egyéni tulajdonságainak átadása prop-ok segítségével
+- Adatforrás használata és map-elés
+- Mik azok a hookok
+- Mi az a state?
+- Teljes óraszám számláló megvalósítása állapotkezeléssel
 
 ## Mik a komponensek?
 
@@ -17,7 +18,7 @@
   - Jobb karbantarthatóság: Ha változik egy komponens logikája, csak egy helyen kell módosítanod.
   - Olvashatóbb kódot eredményez: Az alkalmazás logikája kisebb, könnyen érthető részekre bontható.
 
-## Demo: Tanóra kártya elkészítése statikus komponensként
+## Tanóra kártya elkészítése statikus komponensként
 
 ## Mi az a prop?
 
@@ -34,7 +35,7 @@
   - Újrafelhasználhatóság: Ugyanaz a komponens különböző adatokat kezelhet attól függően, hogy milyen prop-okat kap.
   - Átláthatóság: Könnyen nyomon követhető az adatáramlás a komponensek között.
 
-## Demo: 3 kártya komponens elkészítése: a komponens példányok egyéni tulajdonságainak átadása prop-ok segítségével
+## Demo: A komponens példányok egyéni tulajdonságainak átadása prop-ok segítségével
 
 ## Mi az a state? (hookokról általában)
 
@@ -47,11 +48,13 @@
     - Csak a legfelső szinten használható (nem lehet például ciklusokban hívni).
     - Csak React komponensekben vagy saját hook-okban használható.
 
+## Mi az a state?
+
 - **Mi az a state?**
   - A state a React egyik alapfogalma, amely lehetővé teszi, hogy a komponensek "emlékezzenek" az aktuális állapotukra. Ez dinamikus felhasználói interakciókat tesz lehetővé, például űrlapok kitöltését vagy gombok kattintását.
 
-## Demo: Adatforrás használata és map-elés
+## Adatforrás használata és map-elés
 
 - **Cél:** Használjunk egy tömböt az adatok forrásaként, és a map függvénnyel dinamikusan hozzunk létre kártyákat.
 
-## Demo: Teljes óraszám számláló
+## Teljes óraszám számláló

@@ -1,12 +1,11 @@
 # 1. modul elméleti áttekintés - React és JSX
 
 - Mi az a React?
-- Demo: HTML/CSS kártyák létrehozása - Probléma bemutatása
-- Demo: React projekt inicializálása
+- React projekt inicializálása
 - Mi az a JSX?
 - Styling alkalmazása
-- Demo: Template elkészítése JSX-ben
-- Demo: Project buildelése
+- A kapott HTML oldal elkészítése JSX-ben
+- Project buildelése
 
 ## Mi az a React?
 
@@ -20,13 +19,7 @@
 
 - További érdekesség: A React ma már számos területen elterjedt, például mobilapp-fejlesztésben is (React Native).
 
-## Demo: HTML/CSS kártyák létrehozása
-
-- **Probléma megfogalmazása:**
-  - Ha a kártyák stílusán változtatni kell, minden egyes másolatot külön módosítani kell.
-  - A statikus kód duplikáció nehezen karbantartható, és növeli a hibalehetőségeket.
-
-## Demo: React project inicializálása
+## React project inicializálása
 
 1. Nyiss meg egy terminált, és futtasd a következő parancsot: `npm create vite@latest`
 2. Adj nevet a projektnek (például: `tanmenet-app`), majd válaszd ki a `React + JavaScript` opciót.
@@ -56,9 +49,7 @@ A **Vite** egy modern eszköz, amely gyorsabb fejlesztői környezetet biztosít
   - **Preprocesszorok (pl. SCSS, LESS):** Ha előfeldolgozókat használunk, a CSS kódunk lehet strukturáltabb, támogathat változókat, mixineket és egyéb haladó funkciókat. Ez hasznos lehet komplex projektek esetén.
   - **Tailwind CSS:** Ez egy utility-first megközelítés, amely előre definiált osztályokat biztosít. Segítségével gyorsan építhetünk fel designokat, anélkül hogy manuálisan kellene CSS-t írni.
 
-## Demo: Kártya elkészítése JSX-ben
-
-## Demo: Project buildelése
+## A project buildelése
 
 Amikor egy React alkalmazást elkészítünk, az általában fejlesztői módban fut, ahol a kódot élőben szerkeszthetjük, és azonnal láthatjuk a változtatásokat. Azonban amikor az alkalmazást éles környezetbe szeretnénk telepíteni – például egy szerverre vagy tárhelyre –, akkor azt "buildelni" kell. Ez a folyamat optimalizálja az alkalmazást, hogy gyorsan és hatékonyan működjön a felhasználóknál.
 
