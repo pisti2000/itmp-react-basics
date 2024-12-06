@@ -1,19 +1,21 @@
 import { useState } from "react";
 
-const OraForm = ({ onOraAdd }) => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+const OraForm = ({ onOraHozzaad }) => {
+  const [cim, setCim] = useState("");
+  const [leiras, setLeiras] = useState("");
 
-  function handleFormSubmit(event) {
-    event.preventDefault();
+  function handleFormSubmit(e) {
+    e.preventDefault();
 
     const newOra = {
-      id: Date.now(),
-      title,
-      description,
+      cim,
+      leiras,
     };
 
-    onOraAdd(newOra);
+    onOraHozzaad(newOra);
+
+    setCim("");
+    setLeiras("");
   }
 
   return (
@@ -22,19 +24,19 @@ const OraForm = ({ onOraAdd }) => {
         <input
           type="text"
           placeholder="Cím"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={cim}
+          onChange={(e) => setCim(e.target.value)}
         />
         <textarea
           placeholder="Leírás"
           rows="5"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          value={leiras}
+          onChange={(e) => setLeiras(e.target.value)}
         ></textarea>
       </div>
       <aside className="col">
         <button className="btn">Hozzáadás</button>
-        {/* <button className="btn outline">Mégsem</button> */}
+        <button className="btn outline">Mégsem</button>
       </aside>
     </form>
   );

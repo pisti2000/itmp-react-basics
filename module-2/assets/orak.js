@@ -1,28 +1,28 @@
 const orak = [
   {
-    id: 1,
-    title: "Bevezetés a webfejlesztésbe",
-    description: "Weboldalak működése és HTML áttekintés.",
+    oraSzam: 1,
+    cim: "Bevezetés a webfejlesztésbe",
+    leiras: "Weboldalak működése és HTML áttekintés.",
   },
   {
-    id: 2,
-    title: "Fejlesztői környezetek",
-    description:
+    oraSzam: 2,
+    cim: "Fejlesztői környezetek",
+    leiras:
       "Az online és a professzionális fejlesztői eszközök áttekintése. A Visual Studio Code telepítése és alapvető használatának bemutatása.",
   },
   {
-    id: 3,
-    title: "Alapvető HTML tagek",
-    description: "Legfontosabb tagek használata: h1-h6, p, img, a.",
+    oraSzam: 3,
+    cim: "Alapvető HTML tagek",
+    leiras: "Legfontosabb tagek használata: h1-h6, p, img, a.",
   },
   {
-    id: 4,
-    title: "HTML attribútumok és szövegformázás",
-    description: "Attribútumok: id, class, és szövegformázás.",
+    oraSzam: 4,
+    cim: "HTML attribútumok és szövegformázás",
+    leiras: "Attribútumok: id, class, és szövegformázás.",
   },
   {
-    id: 5,
-    title: "HTML listák és táblázatok",
-    description: "Listaelemek (ul, ol) és táblázatok (table).",
+    oraSzam: 5,
+    cim: "HTML listák és táblázatok",
+    leiras: "Listaelemek (ul, ol) és táblázatok (table).",
   },
 ];

@@ -1,15 +1,13 @@
-const OraCard = ({ ora, index, onDelete }) => {
+const OraCard = (props) => {
   return (
     <article className="ora">
       <header>
-        <h3>{index + 1}. óra</h3>
+        <h3>{props.oraSzam}</h3>
         <button className="icon-button">📝</button>
-        <button className="icon-button" onClick={() => onDelete(ora)}>
-          🗑️
-        </button>
+        <button className="icon-button">🗑️</button>
       </header>
-      <h4>{ora.title}</h4>
-      <p>{ora.description}</p>
+      <h4>{props.cim}</h4>
+      <p>{props.children}</p>
     </article>
   );
 };
