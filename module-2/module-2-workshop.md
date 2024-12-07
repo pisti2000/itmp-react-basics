@@ -18,7 +18,7 @@
 3. Hozz létre egy fájlt az `src/components` mappában `OraCard.jsx` néven, majd definiálj egy üres React komponenst!
 
    ```jsx
-   const OraCard = (prop) => {
+   const OraCard = (props) => {
      return <div>OraCard</div>;
    };
 
@@ -29,7 +29,7 @@
 > Az ESLint miatt lehet, hogy a komponens ilyesmi warningot/errort dob: **"... is missing in props validation"**.  
 > Megoldás: Az `eslint.config.js` fájlodat cseréld le a megoldás `eslint.config.js` fájljára! A különbség csak a 36. sor.
 
-4. Az `AppMasolat.jsx`-ből másolj ki egy óra kártyát ebbe az új fájlba a `<div>OraCard</div>` helyére. (Így néz ki egy kártya: `<article className="ora">...</article>`)
+4. Az `AppMasolat.jsx`-ből másold ki az óra kártyát ebbe az új fájlba a `<div>OraCard</div>` helyére. (Így néz ki egy kártya: `<article className="ora">...</article>`)
 
 5. Az `App.jsx`-ben importáld be az `OraCard` komponenst, és jeleníts meg egy kártyát a komponens segítségével.
 
@@ -68,7 +68,7 @@
 1. Hozz létre egy fájlt az `src/components` mappában `Oraszam.jsx` néven, majd definiálj egy üres React komponenst!
 
    ```jsx
-   const Oraszam = (prop) => {
+   const Oraszam = (props) => {
      return <div>Oraszam</div>;
    };
 

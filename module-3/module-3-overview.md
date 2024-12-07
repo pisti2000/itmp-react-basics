@@ -16,7 +16,7 @@
     ```jsx
     function Greeting({ isLoggedIn }) {
       if (isLoggedIn) {
-        return <h1>Üdvözlünk vissza!</h1>;
+        return <h1>Üdvözlünk újra!</h1>;
       } else {
         return <h1>Kérlek, jelentkezz be!</h1>;
       }
@@ -28,7 +28,7 @@
     ```jsx
     function Greeting({ isLoggedIn }) {
       return (
-        <h1>{isLoggedIn ? "Üdvözlünk vissza!" : "Kérlek, jelentkezz be!"}</h1>
+        <h1>{isLoggedIn ? "Üdvözlünk újra!" : "Kérlek, jelentkezz be!"}</h1>
       );
     }
     ```

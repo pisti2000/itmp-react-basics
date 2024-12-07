@@ -36,7 +36,7 @@ const OraForm = ({ onOraHozzaad }) => {
       </div>
       <aside className="col">
         <button className="btn">Hozzáadás</button>
-        <button className="btn outline">Mégsem</button>
+        {/* <button className="btn outline">Mégsem</button> */}
       </aside>
     </form>
   );

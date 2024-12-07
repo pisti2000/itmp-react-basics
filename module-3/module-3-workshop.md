@@ -15,7 +15,7 @@
 1. Hozz létre egy fájlt az `src/components` mappában `Temakorok.jsx` néven, majd definiálj egy üres React komponenst!
 
    ```jsx
-   const Temakorok = (prop) => {
+   const Temakorok = () => {
      return <div>Témakörök</div>;
    };
 
@@ -37,7 +37,7 @@
 
 </details>
 
-3. Szintén kondicionális rendereléssel csináld meg azt, hogy a gomb a `"Témakörök elrejtése"` és a `"Témakörök megjelenítése"` értékek között váltakozzon a state értékének megfelelően. (ha `temakorokMegjelenitve` igaz, akkor `"Témakörök elrejtése"`, különben `"Témakörök megjelenítése"`)
+5. Szintén kondicionális rendereléssel csináld meg azt, hogy a gomb a `"Témakörök elrejtése"` és a `"Témakörök megjelenítése"` értékek között váltakozzon a state értékének megfelelően. (ha `temakorokMegjelenitve` igaz, akkor `"Témakörök elrejtése"`, különben `"Témakörök megjelenítése"`)
 
 <details>
 <summary>Segítség: kondicionális renderelés (ternary operator)</summary>
@@ -48,7 +48,7 @@
 
 </details>
 
-4. A `"Témakörök elrejtése"` gombra való kattintás változtassa a `temakorokMegjelenitve` state értékét az ellenkezőjére. Mivel ez egy boolean, simán negálni tudjuk. (`!temakorokShown`)
+6. A `"Témakörök elrejtése"` gombra való kattintás változtassa a `temakorokMegjelenitve` state értékét az ellenkezőjére. Mivel ez egy boolean, simán negálni tudjuk. (`!temakorokShown`)
 
 <details>
 <summary>Megoldás</summary>
@@ -80,11 +80,13 @@
 </section>
 ```
 
+7. Az elkészült komponensedet használd az `App.jsx`-ben: <Temakorok />
+
 </details>
 
 ## "Új óra" űrlap létrehozása
 
-3. Az `App.jsx`-ben az eddigi orak konstans tömb helyett definiáld state-ként a tömböt.
+1. Az `App.jsx`-ben az eddigi orak konstans tömb helyett definiáld state-ként a tömböt.
 
 <details>
 <summary>Segítség: hogyan kell state-et definiálni?</summary>
@@ -108,7 +110,7 @@ Neked a korábbi `orak` tömb értékét kell betenned a `"kezdőérték"` helye
 
 </details>
 
-1. Hozz létre egy komponenst az `src/components` mappába `OraForm` néven. Helyezzük át az `App.jsx`-ben lévő form-ot ebbe a komponensbe. A "Mégsem" gombra nem lesz szükség még, ezt kikommentelheted. Az `App.jsx`-ben a form helyére helyezzük be ezt a komponenst: `<OraForm />`. Ne felejtsd el beimportálni!
+1. Hozz létre egy komponenst az `src/components` mappába `OraForm` néven. Helyezzük át az `App.jsx`-ben lévő form-ot ebbe a komponensbe. A "Mégsem" gombra nem lesz szükség még, ezt kikommentelheted. (kommentelés JSX-ben: `<div>Szia! {/* Hogy vagy? */}</div>`, ahol `/**/` a komment) Az `App.jsx`-be helyezzük be ezt a komponenst: `<OraForm />`. Ne felejtsd el beimportálni!
 
 2. Definiálj két state változót: `cim`, `leiras`. Oldd meg azt, hogyha az inputon valaki változtat, akkor az alkalmazás mentse el az input értékét a megfelelő state-be. Ehhez használd az `onChange` eseménykezelőt. Ne felejtsd value-ként átadni a state értékét az inputnak!
 
@@ -202,13 +204,15 @@ A megoldást [itt](./workshop-solution/src/components/OraForm.jsx) találod, hog
 <section className="ora-grid">
   {orak.map((ora, index) => (
     <OraCard
-      key={ora.id}
-      ora={ora}
-      index={index}
-      onKartyaTorles={(o) =>
-        setOrak((prev) => prev.filter((x) => x.id !== o.id))
+      key={index}
+      oraSzam={`${index + 1}. óra`}
+      cim={ora.cim}
+      onKartyaTorles={() =>
+        setOrak((prev) => prev.filter((ora, i) => i !== index))
       }
-    />
+    >
+      {ora.leiras}
+    </OraCard>
   ))}
 </section>
 ```
