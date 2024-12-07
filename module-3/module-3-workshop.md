@@ -110,9 +110,9 @@ Neked a korábbi `orak` tömb értékét kell betenned a `"kezdőérték"` helye
 
 </details>
 
-1. Hozz létre egy komponenst az `src/components` mappába `OraForm` néven. Helyezzük át az `App.jsx`-ben lévő form-ot ebbe a komponensbe. A "Mégsem" gombra nem lesz szükség még, ezt kikommentelheted. (kommentelés JSX-ben: `<div>Szia! {/* Hogy vagy? */}</div>`, ahol `/**/` a komment) Az `App.jsx`-be helyezzük be ezt a komponenst: `<OraForm />`. Ne felejtsd el beimportálni!
+2. Hozz létre egy komponenst az `src/components` mappába `OraForm` néven. Helyezzük át az `App.jsx`-ben lévő form-ot ebbe a komponensbe. A "Mégsem" gombra nem lesz szükség még, ezt kikommentelheted. (kommentelés JSX-ben: `<div>Szia! {/* Hogy vagy? */}</div>`, ahol `/**/` a komment) Az `App.jsx`-be helyezzük be ezt a komponenst: `<OraForm />`. Ne felejtsd el beimportálni!
 
-2. Definiálj két state változót: `cim`, `leiras`. Oldd meg azt, hogyha az inputon valaki változtat, akkor az alkalmazás mentse el az input értékét a megfelelő state-be. Ehhez használd az `onChange` eseménykezelőt. Ne felejtsd value-ként átadni a state értékét az inputnak!
+3. Definiálj két state változót: `cim`, `leiras`. Oldd meg azt, hogyha az inputon valaki változtat, akkor az alkalmazás mentse el az input értékét a megfelelő state-be. Ehhez használd az `onChange` eseménykezelőt. Ne felejtsd value-ként átadni a state értékét az inputnak!
 
 <details>
 <summary>Megoldás</summary>
@@ -188,7 +188,7 @@ A megoldást [itt](./workshop-solution/src/components/OraForm.jsx) találod, hog
 <summary>Megoldás</summary>
 
 ```jsx
-<button className="icon-button" onClick={() => onKartyaTorles(ora)}>
+<button className="icon-button" onClick={props.onKartyaTorles}>
   🗑️
 </button>
 ```
@@ -226,5 +226,8 @@ A megoldást [itt](./workshop-solution/src/components/OraForm.jsx) találod, hog
 <hr />
 
 > [!NOTE]
-> Ha nem sikerült, a megoldást a [module-3/workshop-solution-with-edit](./workshop-solution-with-edit/) mappában találod.  
+> Ha nem sikerült, a megoldást a [module-3/workshop-solution](./workshop-solution/) mappában találod.  
 > Elakadás esetén fordulj a mentorodhoz!
+
+> [!NOTE]
+> A szorgalmi feladat megoldása itt van: [module-3/workshop-solution-with-edit](./workshop-solution-with-edit/)
